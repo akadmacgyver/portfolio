@@ -1,10 +1,15 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Starter`,
+    title: `Wojciech Sala — Portfolio`,
+    description: `My personal portfolio website, check out and feel free to contact me.`,
+    keywords: `Wojciech, Sala, Wojciech Sala, Wojtek, portfolio, Warsaw, Frontend`,
+    author: `Wojciech Sala`,
   },
-  plugins: [
-    `gatsby-plugin-react-helmet`,
-    // Add typescript stack into webpack
-    `gatsby-plugin-typescript`
-  ],
+  plugins: [`gatsby-plugin-styled-components`, `gatsby-plugin-react-helmet`],
 }
