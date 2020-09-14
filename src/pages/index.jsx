@@ -7,8 +7,11 @@ const Home = () => {
   const intl = useIntl()
   return (
     <>
-      <SEO lang={intl.locale} />
-      <MasterStyle>asdf</MasterStyle>
+      <SEO
+        lang={intl.locale}
+        description={intl.formatMessage({ id: "description" })}
+      />
+      <MasterStyle>{intl.locale}</MasterStyle>
     </>
   )
 }
