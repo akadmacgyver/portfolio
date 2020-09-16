@@ -1,15 +1,27 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 
-const HeaderButton = () => {
+const HeaderButton = ({ type, onClick }) => {
   return (
-    <Container>
-      <Inner>
-        <div class="first"></div>
-        <div></div>
-      </Inner>
+    <Container onClick={onClick}>
+      {type === "menu" ? (
+        <MenuInner>
+          <div class="first"></div>
+          <div></div>
+        </MenuInner>
+      ) : (
+        <CloseInner></CloseInner>
+      )}
     </Container>
   )
+}
+HeaderButton.defaultProps = {
+  type: "menu" | "close",
+}
+
+HeaderButton.propTypes = {
+  type: PropTypes.string,
 }
 
 export default HeaderButton
@@ -25,7 +37,7 @@ const Container = styled.div`
     cursor: pointer;
   }
 `
-const Inner = styled.div`
+const MenuInner = styled.div`
   width: 24px;
   height: 13px;
   display: flex;
@@ -41,5 +53,26 @@ const Inner = styled.div`
 
   .first {
     align-self: flex-end;
+  }
+`
+// TODO: make animation and fix
+const CloseInner = styled.div`
+  width: 24px;
+  height: 24px;
+  display: flex;
+
+  :before,
+  :after {
+    display: flex;
+    content: " ";
+    height: 24px;
+    width: 2px;
+    background-color: black;
+  }
+  :before {
+    transform: rotate(45deg);
+  }
+  :after {
+    transform: rotate(-45deg);
   }
 `

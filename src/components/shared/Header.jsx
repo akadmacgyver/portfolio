@@ -1,12 +1,24 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Button from "./HeaderButton"
+import Hamburger from "./Hamburger"
 
 const Header = () => {
+  const [isMenuOpen, setMenuState] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuState(!isMenuOpen)
+  }
+
   return (
     <Container>
       Wojciech Sala
-      <Button />
+      {isMenuOpen ? (
+        <Button type="close" onClick={toggleMenu} />
+      ) : (
+        <Button type="menu" onClick={toggleMenu} />
+      )}
+      <Hamburger isOpen={isMenuOpen} />
     </Container>
   )
 }
@@ -14,8 +26,12 @@ const Header = () => {
 export default Header
 
 const Container = styled.header`
-  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
   height: 60px;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
