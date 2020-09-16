@@ -1,10 +1,11 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
+import styled from "styled-components"
 import MasterStyle from "../assets/styles/MasterStyle"
 import SEO from "../components/shared/SEO"
 
 import Header from "../components/shared/Header"
-import Footer from "../components/shared/Footer"
+import Hero from "../components/Welcome/Hero"
 
 const Home = () => {
   const intl = useIntl()
@@ -16,10 +17,23 @@ const Home = () => {
       />
       <MasterStyle>
         <Header />
-        <Footer />
+        <Container>
+          <Hero
+            heading={intl.formatMessage({ id: "welcomeHeading" })}
+            text={intl.formatMessage({ id: "welcomeText" })}
+          />
+        </Container>
       </MasterStyle>
     </>
   )
 }
 
 export default Home
+
+const Container = styled.div`
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`

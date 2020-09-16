@@ -6,10 +6,34 @@ import { FiMail } from "react-icons/fi"
 const Footer = () => {
   return (
     <Container>
-      <FaLinkedinIn class="icon" />
-      <FaGithub class="icon" />
-      <FaBehance class="icon" />
-      <FiMail class="icon" />
+      <a
+        href="https://www.linkedin.com/in/wojciechsala/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaLinkedinIn class="icon" />
+      </a>
+      <a
+        href="https://github.com/WojciechSala"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaGithub class="icon" />
+      </a>
+      <a
+        href="https://www.behance.net/WojciechSala"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaBehance class="icon" />
+      </a>
+      <a
+        href="mailto: wojteksala190@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FiMail class="icon" />
+      </a>
     </Container>
   )
 }
