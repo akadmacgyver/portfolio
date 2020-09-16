@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styled from "styled-components"
 import Footer from "../shared/Footer"
 import { IoIosArrowDown } from "react-icons/io"
@@ -14,6 +15,16 @@ const Hero = ({ heading, text }) => {
       <IoIosArrowDown id="arrow_down" />
     </Container>
   )
+}
+
+Hero.defaultProps = {
+  heading: ``,
+  text: ``,
+}
+
+Hero.propTypes = {
+  heading: PropTypes.string,
+  text: PropTypes.string,
 }
 
 export default Hero
