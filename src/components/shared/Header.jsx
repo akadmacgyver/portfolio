@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <Container>
-      Wojciech Sala
+      <a href="/">Wojciech Sala</a>
       {isMenuOpen ? (
         <Button type="close" onClick={toggleMenu} />
       ) : (
