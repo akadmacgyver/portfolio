@@ -2,36 +2,29 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-const HeaderButton = ({ type, onClick }) => {
+const HeaderButton = ({ isOpen, onClick }) => {
   return (
     <Container onClick={onClick}>
-      {type === "menu" ? (
-        <MenuInner>
-          <div class="first"></div>
-          <div></div>
-        </MenuInner>
-      ) : (
-        <CloseInner></CloseInner>
-      )}
+      <MenuInner isOpen={isOpen}></MenuInner>
     </Container>
   )
 }
 HeaderButton.defaultProps = {
-  type: "menu" | "close",
+  isOpen: false,
 }
 
 HeaderButton.propTypes = {
-  type: PropTypes.string,
+  isOpen: PropTypes.bool,
 }
 
 export default HeaderButton
 
-const Container = styled.div`
+const Container = styled.button`
+  border: none;
+  background: none;
+  z-index: 999;
   width: 32px;
   height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   :hover {
     cursor: pointer;
@@ -40,39 +33,35 @@ const Container = styled.div`
 const MenuInner = styled.div`
   width: 24px;
   height: 13px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  /* background: ${({ isOpen }) => (isOpen ? "#000" : "#ffff00")}; */
 
-  div {
+  ::before,
+  ::after {
+    content: "";
+    position: absolute;
     width: 85%;
     height: 2px;
     background: black;
-    align-self: flex-start;
+    transition: transform 0.25s ease-in-out;
   }
 
-  .first {
-    align-self: flex-end;
+  ::before {
+    left: 12%;
+    top: 0;
+    transform: translate(
+        ${({ isOpen }) => (isOpen ? "-2px" : "0")},
+        ${({ isOpen }) => (isOpen ? "5px" : "0")}
+      )
+      rotate(${({ isOpen }) => (isOpen ? "45deg" : "0")});
   }
-`
-// TODO: make animation and fix
-const CloseInner = styled.div`
-  width: 24px;
-  height: 24px;
-  display: flex;
-
-  :before,
-  :after {
-    display: flex;
-    content: " ";
-    height: 24px;
-    width: 2px;
-    background-color: black;
-  }
-  :before {
-    transform: rotate(45deg);
-  }
-  :after {
-    transform: rotate(-45deg);
+  ::after {
+    left: -12%;
+    bottom: 0;
+    transform: translate(
+        ${({ isOpen }) => (isOpen ? "3px" : "0")},
+        ${({ isOpen }) => (isOpen ? "-6px" : "0")}
+      )
+      rotate(${({ isOpen }) => (isOpen ? "-45deg" : "0")});
   }
 `

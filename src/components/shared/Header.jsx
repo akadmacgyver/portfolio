@@ -13,11 +13,7 @@ const Header = () => {
   return (
     <Container>
       <a href="/">Wojciech Sala</a>
-      {isMenuOpen ? (
-        <Button type="close" onClick={toggleMenu} />
-      ) : (
-        <Button type="menu" onClick={toggleMenu} />
-      )}
+      <Button isOpen={isMenuOpen} onClick={toggleMenu} />
       <Hamburger isOpen={isMenuOpen} />
     </Container>
   )
