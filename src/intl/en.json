@@ -4,5 +4,17 @@
   "welcomeText": "— a front-end to full stack developer with abilities to UI/UX design.",
   "About": "About",
   "Projects": "Projects",
-  "Resume": "Résumé"
+  "Resume": "Résumé",
+  "Q1": "Today, we will interview Wojciech Sala who is a polish 20yo front-end developer, he also tries his skills in UI/UX design. Is that right Wojtek?",
+  "A1": "Yeah, that's about right, I also have a bit of experience in back-end technologies and I'm into motion design lately.",
+  "Q2": "What could you tell us  about your experience and projects you worked on?",
+  "A2": "Well... I'm coding since I was 15 so there was a few smaller projects but the most I've learned from are the latest ones. The scale of these is pretty big and I had a chance to work on them in a team, that was a humbling experience. Thanks to these ideas I also got to know technologies like git, mobile development and cloud computing much better. I feel great about it even though the projects are not done yet, feel free to check out my GitHub for more.",
+  "Q3": "What goals and aspirations do you have?",
+  "A3": "First of all I'm trying to find an opportunity to gain some commercial experience full time but also freelancing in my free time. I've worked in a team and know how significant more experienced developer is. I'm looking forward to get into community and start contributing to open-source projects to expand my horizons.",
+  "Q4": "What skills did you manage to develop in your career?",
+  "A4": "Throughout the time I worked on my projects I've always wanted to be independent and able to develop whole project just myself. <br/>In terms of design I feel ok with<br/>If we're talking front-end I'm pretty confident with<br/>On the back-end though I worked with<br/>And some more general like",
+  "Q5": "Ok, the last question is do you have any time left for personal interests, if so what are those?",
+  "A5": "Yeah, I do in fact I'm very into learning new languages, like Spanish at the moment. Also I'm on my way to travel more and start scuba-diving more often. I'm a person who always tries to challenge myself and learn something new to keep life interesting.",
+  "Q6": "I think that's essential in our short lifes to keep it interesting, thanks a lot for the talk!",
+  "A6": "It was a pleasure, see you!"
 }

@@ -1,15 +1,40 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import MasterStyle from "../assets/styles/MasterStyle"
 import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
 
+const idsList = [
+  { question: "Q1", answer: "A1", highlight: false },
+  { question: "Q2", answer: "A2", highlight: true },
+  { question: "Q3", answer: "A3", highlight: true },
+  { question: "Q4", answer: "A4", highlight: true },
+  { question: "Q5", answer: "A5", highlight: true },
+  { question: "Q6", answer: "A6", highlight: false },
+]
+
 const About = () => {
+  const intl = useIntl()
   return (
     <MasterStyle>
       <Header />
       <Container>
         <Heading headingId="About" />
+        {idsList.map(item => (
+          <>
+            <Question
+              id={item.question + intl.locale}
+              highlight={item.highlight}
+            >
+              <FormattedMessage id={item.question} />
+            </Question>
+            <Answer>
+              <FormattedMessage id={item.answer} />
+            </Answer>
+          </>
+        ))}
       </Container>
     </MasterStyle>
   )
@@ -20,4 +45,55 @@ export default About
 const Container = styled.div`
   width: 100%;
   padding: 0 32px;
+
+  #Q2en {
+    ::before {
+      top: 40%;
+      left: 0;
+      width: 170px;
+    }
+  }
+  #Q3en {
+    ::before {
+      top: 2px;
+      left: 60px;
+      width: 140px;
+    }
+  }
+  #Q4en {
+    ::before {
+      top: 2px;
+      left: 85px;
+      width: 40px;
+    }
+  }
+  #Q5en {
+    ::before {
+      top: 38%;
+      right: 10px;
+      width: 65px;
+    }
+  }
+`
+const Question = styled.div`
+  float: right;
+  width: 80%;
+  text-align: right;
+  color: ${({ theme }) => theme.color.grey[800]};
+  z-index: 2;
+  position: relative;
+
+  ::before {
+    content: "";
+    position: ${({ highlight }) => (highlight ? "absolute" : "none")};
+    z-index: -1;
+    height: 16px;
+    width: 200px;
+    background: ${({ theme }) => theme.color.yellow};
+  }
+`
+const Answer = styled.a`
+  float: left;
+  width: 80%;
+  margin: 50px 0;
 `
