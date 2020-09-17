@@ -24,13 +24,14 @@ export default Header
 const Container = styled.header`
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 998;
   width: 100vw;
   height: 60px;
   position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 32px;
   font-size: 1.2rem;
+  background-color: ${({ theme }) => theme.color.white};
 `

@@ -50,35 +50,12 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.color.yellow};
   transform: translateY(${({ isOpen }) => (isOpen ? "0" : "-100%")});
   color: ${({ isOpen }) => (isOpen ? "#000" : "#ffff00")};
-  transition: ${({ isOpen }) =>
-    isOpen
-      ? "transform 0.3s 0s, color 0.35s 0.2s ease-in-out"
-      : "transform 0.3s 0s, color 0s 0s ease-in-out"};
-  -webkit-transition: ${({ isOpen }) =>
-    isOpen
-      ? "transform 0.3s 0s, color 0.35s 0.2s ease-in-out"
-      : "transform 0.3s 0s, color 0s 0s ease-in-out"};
-  -moz-transition: ${({ isOpen }) =>
-    isOpen
-      ? "transform 0.3s 0s, color 0.35s 0.2s ease-in-out"
-      : "transform 0.3s 0s, color 0s 0s ease-in-out"};
-  -ms-transition: ${({ isOpen }) =>
-    isOpen
-      ? "transform 0.3s 0s, color 0.35s 0.2s ease-in-out"
-      : "transform 0.3s 0s, color 0s 0s ease-in-out"};
-  -o-transition: ${({ isOpen }) =>
-    isOpen
-      ? "transform 0.3s 0s, color 0.35s 0.2s ease-in-out"
-      : "transform 0.3s 0s, color 0s 0s ease-in-out"};
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
 `
 const Inner = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 32px;
   display: flex;
   align-items: center;
 `

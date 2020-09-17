@@ -45,6 +45,10 @@ const MenuInner = styled.div`
     height: 2px;
     background: black;
     transition: transform 0.25s ease-in-out;
+    -webkit-transition: transform 0.25s ease-in-out;
+    -moz-transition: transform 0.25s ease-in-out;
+    -ms-transition: transform 0.25s ease-in-out;
+    -o-transition: transform 0.25s ease-in-out;
   }
 
   ::before {

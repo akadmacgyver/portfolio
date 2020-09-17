@@ -7,8 +7,8 @@ import { IoIosArrowDown } from "react-icons/io"
 const Hero = ({ heading, text }) => {
   return (
     <Container>
-      <Heading>{heading}</Heading>
       <Inner>
+        <Heading>{heading}</Heading>
         <Text>{text}</Text>
         <Footer />
       </Inner>
@@ -48,7 +48,22 @@ const Inner = styled.div`
 
 const Heading = styled.div`
   font-size: 1.875rem;
-  margin-left: 40px;
+  margin-left: -70px;
+  width: 60vw;
+  position: relative;
+  z-index: 2;
+
+  /* THE YELLOW BOX */
+  ::before {
+    content: "";
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    z-index: -1;
+    width: 200px;
+    height: 270px;
+    background-color: ${({ theme }) => theme.color.yellow};
+  }
 `
 const Text = styled.div`
   /* with width set to 215px there's no cuts on text */
