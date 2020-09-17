@@ -2,19 +2,21 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-const HeaderButton = ({ isOpen, onClick }) => {
+const HeaderButton = ({ isOpen, toggleMenu }) => {
   return (
-    <Container onClick={onClick}>
+    <Container onClick={toggleMenu}>
       <MenuInner isOpen={isOpen}></MenuInner>
     </Container>
   )
 }
 HeaderButton.defaultProps = {
   isOpen: false,
+  toggleMenu: () => {},
 }
 
 HeaderButton.propTypes = {
   isOpen: PropTypes.bool,
+  toggleMenu: PropTypes.func,
 }
 
 export default HeaderButton
@@ -34,7 +36,6 @@ const MenuInner = styled.div`
   width: 24px;
   height: 13px;
   position: relative;
-  /* background: ${({ isOpen }) => (isOpen ? "#000" : "#ffff00")}; */
 
   ::before,
   ::after {

@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Container>
       <a href="/">Wojciech Sala</a>
-      <Button isOpen={isMenuOpen} onClick={toggleMenu} />
+      <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Hamburger isOpen={isMenuOpen} />
     </Container>
   )
