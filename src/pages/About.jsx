@@ -7,6 +7,24 @@ import SEO from "../components/shared/SEO"
 import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
 
+import { FiFigma } from "react-icons/fi"
+import {
+  FaReact,
+  FaVuejs,
+  FaSass,
+  FaLinux,
+  FaGithub,
+  FaAws,
+} from "react-icons/fa"
+import {
+  SiAdobexd,
+  SiAdobephotoshop,
+  SiJavascript,
+  SiRedux,
+  SiNodeDotJs,
+  SiGatsby,
+} from "react-icons/si"
+
 const idsList = [
   { question: "Q1", answer: "A1", highlight: false },
   { question: "Q2", answer: "A2", highlight: true },
@@ -37,7 +55,39 @@ const About = () => {
                 <FormattedMessage id={item.question} />
               </Question>
               <Answer>
-                <FormattedMessage id={item.answer} />
+                {item.answer === "A4" ? (
+                  <>
+                    <IconsContainer>
+                      <DesignIcons>
+                        <FiFigma />
+                        <SiAdobexd />
+                        <SiAdobephotoshop />
+                      </DesignIcons>
+                      <FrontIcons>
+                        <SiJavascript />
+                        <FaReact />
+                        <SiRedux />
+                        <FaVuejs />
+                        <SiGatsby />
+                        <FaSass />
+                      </FrontIcons>
+                      <SiNodeDotJs />
+                      <GeneralIcons>
+                        <FaLinux />
+                        <FaGithub />
+                        <FaAws />
+                      </GeneralIcons>
+                    </IconsContainer>
+                    {intl
+                      .formatMessage({ id: item.answer })
+                      .split("/n")
+                      .map(line => (
+                        <p>{line}</p>
+                      ))}
+                  </>
+                ) : (
+                  <FormattedMessage id={item.answer} />
+                )}
               </Answer>
             </>
           ))}
@@ -103,4 +153,33 @@ const Answer = styled.a`
   float: left;
   width: 270px;
   margin: 50px 0;
+  position: relative;
+
+  p {
+    margin-bottom: 50px;
+    width: 250px;
+  }
+`
+// Iphone 5 cuts the icons, change in the future
+const IconsContainer = styled.div`
+  font-size: 1.2rem;
+  text-align: right;
+  position: absolute;
+  right: -40px;
+  top: 140px;
+
+  div svg {
+    margin: 0 5px;
+  }
+  /* Nodejs icon is lose without div parent */
+  svg {
+    margin-right: 5px;
+  }
+`
+const DesignIcons = styled.div``
+const FrontIcons = styled.div`
+  margin: 85px 0 20px 0;
+`
+const GeneralIcons = styled.div`
+  margin-top: 40px;
 `
