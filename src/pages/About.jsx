@@ -3,6 +3,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import MasterStyle from "../assets/styles/MasterStyle"
+import SEO from "../components/shared/SEO"
 import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
 
@@ -18,25 +19,31 @@ const idsList = [
 const About = () => {
   const intl = useIntl()
   return (
-    <MasterStyle>
-      <Header />
-      <Container>
-        <Heading headingId="About" />
-        {idsList.map(item => (
-          <>
-            <Question
-              id={item.question + intl.locale}
-              highlight={item.highlight}
-            >
-              <FormattedMessage id={item.question} />
-            </Question>
-            <Answer>
-              <FormattedMessage id={item.answer} />
-            </Answer>
-          </>
-        ))}
-      </Container>
-    </MasterStyle>
+    <>
+      <SEO
+        lang={intl.locale}
+        description={intl.formatMessage({ id: "description" })}
+      />
+      <MasterStyle>
+        <Header />
+        <Container>
+          <Heading headingId="About" />
+          {idsList.map(item => (
+            <>
+              <Question
+                id={item.question + intl.locale}
+                highlight={item.highlight}
+              >
+                <FormattedMessage id={item.question} />
+              </Question>
+              <Answer>
+                <FormattedMessage id={item.answer} />
+              </Answer>
+            </>
+          ))}
+        </Container>
+      </MasterStyle>
+    </>
   )
 }
 
@@ -48,7 +55,7 @@ const Container = styled.div`
 
   #Q2en {
     ::before {
-      top: 40%;
+      bottom: 0;
       left: 0;
       width: 170px;
     }
@@ -56,28 +63,28 @@ const Container = styled.div`
   #Q3en {
     ::before {
       top: 2px;
-      left: 60px;
+      left: 45px;
       width: 140px;
     }
   }
   #Q4en {
     ::before {
       top: 2px;
-      left: 85px;
+      left: 40px;
       width: 40px;
     }
   }
   #Q5en {
     ::before {
       top: 38%;
-      right: 10px;
+      right: 65px;
       width: 65px;
     }
   }
 `
 const Question = styled.div`
   float: right;
-  width: 80%;
+  width: 270px;
   text-align: right;
   color: ${({ theme }) => theme.color.grey[800]};
   z-index: 2;
@@ -94,6 +101,6 @@ const Question = styled.div`
 `
 const Answer = styled.a`
   float: left;
-  width: 80%;
+  width: 270px;
   margin: 50px 0;
 `

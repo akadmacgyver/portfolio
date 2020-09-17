@@ -33,5 +33,5 @@ const Container = styled.header`
   align-items: center;
   padding: 0 32px;
   font-size: 1.2rem;
-  background-color: ${({ theme }) => theme.color.white};
+  background-color: rgba(255, 255, 255, 0.8);
 `
