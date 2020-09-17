@@ -5,7 +5,7 @@ import { FiMail } from "react-icons/fi"
 
 const Footer = () => {
   return (
-    <Container>
+    <Container data-sal="slide-up" data-sal-delay="900" data-sal-easing="ease">
       <a
         href="https://www.linkedin.com/in/wojciechsala/"
         target="_blank"
