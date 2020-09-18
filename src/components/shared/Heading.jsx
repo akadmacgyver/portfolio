@@ -4,7 +4,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 
 const Heading = ({ headingId }) => {
   return (
-    <Container>
+    <Container data-sal="slide-right" data-sal-easing="ease">
       <FormattedMessage id={headingId} />
     </Container>
   )

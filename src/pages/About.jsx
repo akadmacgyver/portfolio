@@ -53,10 +53,18 @@ const About = () => {
                 id={item.question + "__" + intl.locale}
                 highlight={item.highlight}
                 key={item.question}
+                data-sal="slide-left"
+                data-sal-delay="200"
+                data-sal-easing="ease"
               >
                 <FormattedMessage id={item.question} />
               </Question>
-              <Answer key={item.answer}>
+              <Answer
+                key={item.answer}
+                data-sal="slide-right"
+                data-sal-delay="400"
+                data-sal-easing="ease"
+              >
                 {item.answer === "A4" ? (
                   <>
                     <IconsContainer id={"icons__" + intl.locale}>
