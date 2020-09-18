@@ -1,11 +1,16 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import { FaLinkedinIn, FaBehance, FaGithub } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
 
-const Footer = () => {
+const Footer = ({ isInHamburger }) => {
   return (
-    <Container data-sal="slide-up" data-sal-delay="900" data-sal-easing="ease">
+    <Container
+      data-sal="slide-up"
+      data-sal-delay={isInHamburger ? "200" : "900"}
+      data-sal-easing="ease"
+    >
       <a
         href="https://www.linkedin.com/in/wojciechsala/"
         target="_blank"
@@ -36,6 +41,13 @@ const Footer = () => {
       </a>
     </Container>
   )
+}
+Footer.defaultProps = {
+  isInHamburger: false,
+}
+
+Footer.propTypes = {
+  isInHamburger: PropTypes.bool,
 }
 
 export default Footer

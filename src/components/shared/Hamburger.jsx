@@ -20,7 +20,7 @@ const Hamburger = ({ isOpen }) => {
           </a>
         </TextContainer>
       </Inner>
-      <Footer />
+      <Footer isInHamburger={isOpen} />
     </Container>
   )
 }
