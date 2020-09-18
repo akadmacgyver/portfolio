@@ -9,7 +9,7 @@ const Projects = () => {
     <MasterStyle>
       <Header />
       <Container>
-        <Heading headingId="Projects" />
+        <Heading headingId="projects" />
       </Container>
     </MasterStyle>
   )

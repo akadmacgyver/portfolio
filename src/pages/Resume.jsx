@@ -11,6 +11,7 @@ import SEO from "../components/shared/SEO"
 const Resume = () => {
   const intl = useIntl()
 
+  // TODO: Find a solution for picking the right pdf file dependent on intl.locale
   const resume = useStaticQuery(graphql`
     {
       pdf: file(name: { eq: "resumePLs" }) {
@@ -30,7 +31,7 @@ const Resume = () => {
       <MasterStyle>
         <Header />
         <Container>
-          <Heading headingId="Resume" />
+          <Heading headingId="resume" />
           <ButtonContainer>
             <Button
               href={resume.pdf.publicURL}

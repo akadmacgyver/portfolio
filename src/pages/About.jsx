@@ -46,7 +46,7 @@ const About = () => {
       <MasterStyle>
         <Header />
         <Container>
-          <Heading headingId="About" />
+          <Heading headingId="about" />
           {idsList.map(item => (
             <>
               <Question
