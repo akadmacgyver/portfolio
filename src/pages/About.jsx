@@ -67,7 +67,12 @@ const About = () => {
               >
                 {item.answer === "A4" ? (
                   <>
-                    <IconsContainer id={"icons__" + intl.locale}>
+                    <IconsContainer
+                      id={"icons__" + intl.locale}
+                      data-sal="zoom-in"
+                      data-sal-delay="500"
+                      data-sal-easing="ease"
+                    >
                       <DesignIcons>
                         <FaFigma />
                         <SiAdobexd />
