@@ -7,7 +7,6 @@ import SEO from "../components/shared/SEO"
 import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
 
-import { FiFigma } from "react-icons/fi"
 import {
   FaReact,
   FaVuejs,
@@ -15,7 +14,9 @@ import {
   FaLinux,
   FaGithub,
   FaAws,
+  FaFigma,
 } from "react-icons/fa"
+
 import {
   SiAdobexd,
   SiAdobephotoshop,
@@ -49,21 +50,22 @@ const About = () => {
           {idsList.map(item => (
             <>
               <Question
-                id={item.question + intl.locale}
+                id={item.question + "__" + intl.locale}
                 highlight={item.highlight}
+                key={item.question}
               >
                 <FormattedMessage id={item.question} />
               </Question>
-              <Answer>
+              <Answer key={item.answer}>
                 {item.answer === "A4" ? (
                   <>
-                    <IconsContainer>
+                    <IconsContainer id={"icons__" + intl.locale}>
                       <DesignIcons>
-                        <FiFigma />
+                        <FaFigma />
                         <SiAdobexd />
                         <SiAdobephotoshop />
                       </DesignIcons>
-                      <FrontIcons>
+                      <FrontIcons id={"frontIcons__" + intl.locale}>
                         <SiJavascript />
                         <FaReact />
                         <SiRedux />
@@ -99,39 +101,6 @@ const About = () => {
 
 export default About
 
-const Container = styled.div`
-  width: 100%;
-  padding: 0 32px;
-
-  #Q2en {
-    ::before {
-      bottom: 0;
-      left: 0;
-      width: 170px;
-    }
-  }
-  #Q3en {
-    ::before {
-      top: 2px;
-      left: 45px;
-      width: 140px;
-    }
-  }
-  #Q4en {
-    ::before {
-      top: 2px;
-      left: 40px;
-      width: 40px;
-    }
-  }
-  #Q5en {
-    ::before {
-      top: 38%;
-      right: 65px;
-      width: 65px;
-    }
-  }
-`
 const Question = styled.div`
   float: right;
   width: 270px;
@@ -159,6 +128,16 @@ const Answer = styled.a`
     margin-bottom: 50px;
     width: 250px;
   }
+
+  /* IconContainer position */
+  #icons {
+    &__en {
+      top: 140px;
+    }
+    &__pl {
+      top: 160px;
+    }
+  }
 `
 // Iphone 5 cuts the icons, change in the future
 const IconsContainer = styled.div`
@@ -166,7 +145,6 @@ const IconsContainer = styled.div`
   text-align: right;
   position: absolute;
   right: -40px;
-  top: 140px;
 
   div svg {
     margin: 0 5px;
@@ -175,11 +153,88 @@ const IconsContainer = styled.div`
   svg {
     margin-right: 5px;
   }
+
+  #frontIcons {
+    &__en {
+      margin: 85px 0 20px 0;
+    }
+    &__pl {
+      margin: 85px 0 40px 0;
+    }
+  }
 `
 const DesignIcons = styled.div``
-const FrontIcons = styled.div`
-  margin: 85px 0 20px 0;
-`
+const FrontIcons = styled.div``
 const GeneralIcons = styled.div`
   margin-top: 40px;
+`
+const Container = styled.div`
+  width: 100%;
+  padding: 0 32px;
+
+  #Q2 {
+    &__en {
+      ::before {
+        bottom: 0;
+        left: 0;
+        width: 170px;
+      }
+    }
+    &__pl {
+      ::before {
+        top: 40%;
+        left: 45px;
+        width: 200px;
+      }
+    }
+  }
+  #Q3 {
+    &__en {
+      ::before {
+        top: 2px;
+        left: 45px;
+        width: 140px;
+      }
+    }
+      &__pl {
+        ::before {
+          top: 2px;
+          left: 70px;
+          width: 120px;
+        }
+      }
+    }
+  }
+  #Q4 {
+    &__en {
+      ::before {
+        top: 2px;
+        left: 40px;
+        width: 40px;
+      }
+    }
+    &__pl {
+      ::before {
+        top: 2px;
+        left: 40px;
+        width: 80px;
+      }
+    }
+  }
+  #Q5 {
+    &__en {
+      ::before {
+        top: 38%;
+        right: 65px;
+        width: 65px;
+      }
+    }
+    &__pl {
+      ::before {
+        top: 40%;
+        right: 55px;
+        width: 110px;
+      }
+    }
+  }
 `
