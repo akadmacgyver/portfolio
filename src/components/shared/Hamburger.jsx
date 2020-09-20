@@ -10,13 +10,13 @@ const Hamburger = ({ isOpen }) => {
       <Inner>
         <TextContainer>
           <a href="about">
-            <FormattedMessage id="About" />
+            <FormattedMessage id="about" />
           </a>
           <a href="projects">
-            <FormattedMessage id="Projects" />
+            <FormattedMessage id="projects" />
           </a>
           <a href="resume">
-            <FormattedMessage id="Resume" />
+            <FormattedMessage id="resume" />
           </a>
         </TextContainer>
       </Inner>

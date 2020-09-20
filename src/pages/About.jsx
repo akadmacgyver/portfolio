@@ -41,6 +41,7 @@ const About = () => {
     <>
       <SEO
         lang={intl.locale}
+        titleSuffix={intl.formatMessage({ id: "about" })}
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>

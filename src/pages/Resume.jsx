@@ -26,6 +26,7 @@ const Resume = () => {
     <>
       <SEO
         lang={intl.locale}
+        titleSuffix={intl.formatMessage({ id: "resume" })}
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>

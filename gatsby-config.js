@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Wojciech Sala — Portfolio`,
+    title: `Wojciech Sala — `,
     description: `My personal portfolio website, check out and feel free to contact me.`,
     keywords: `Wojciech, Sala, Wojciech Sala, Wojtek, portfolio, Warsaw, Frontend`,
     author: `Wojciech Sala`,

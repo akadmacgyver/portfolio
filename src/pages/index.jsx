@@ -22,6 +22,7 @@ const Home = () => {
     <>
       <SEO
         lang={intl.locale}
+        titleSuffix="Portfolio"
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
