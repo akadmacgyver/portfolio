@@ -7,6 +7,13 @@ import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
 import Footer from "../components/shared/Footer"
 
+const projects = [
+  {name: "The Topic", href: "topic", website: "https://thetopic.pl", github: "https://github.com/topicpl", behance: ""},
+  {name: "Superfilmowanie", href: "superfilmowanie", website: "http://www.superfilmowanie.pl", github: "https://github.com/WojciechSala/superfilmowanie", behance: "https://www.behance.net/gallery/95514935/Freelance-project"},
+  {name: "On The Roofs", href: "otr", website: "", github: "", behance: "https://www.behance.net/gallery/95511857/On-the-roofs-redesign"},
+  {name: "The Bitcast", href: "bitcast", website: "", github: "https://github.com/WojciechSala/thebitcast-web", behance: ""},
+]
+
 const Projects = () => {
   const intl = useIntl()
   return (
@@ -22,13 +29,14 @@ const Projects = () => {
         <Container>
           <Heading headingId="projects" />
           <Inner>
-            {/* map render from project list and add animations*/}
-            <ProjectLink href="projects/proj"></ProjectLink>
-            <ProjectLink></ProjectLink>
-            <ProjectLink></ProjectLink>
-            <ProjectLink></ProjectLink>
-            <ProjectLink></ProjectLink>
-            <ProjectLink></ProjectLink>
+            {projects.map(item => (
+              <ProjectLink
+                // href={"projects/" + item.href}
+
+                data-sal="zoom-in"
+                data-sal-easing="ease-in-out"
+              ></ProjectLink>
+            ))}
           </Inner>
         </Container>
       </MasterStyle>
