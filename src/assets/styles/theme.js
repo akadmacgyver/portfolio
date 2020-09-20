@@ -15,7 +15,7 @@ export const theme = {
   },
 
   font: {
-    // family: 'Roboto, sans-serif',
+    familySans: "Roboto, sans-serif",
     family: "Roboto Mono monospace",
 
     weight: {

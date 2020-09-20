@@ -70,6 +70,8 @@ const Button = styled.a`
   height: 60px;
   background-color: ${({ theme }) => theme.color.yellow};
   color: ${({ theme }) => theme.color.black};
+  font-family: ${({ theme }) => theme.font.familySans};
+  font-weight: ${({ theme }) => theme.font.weight.regular};
   display: flex;
   align-items: center;
   align-content: center;

@@ -62,7 +62,7 @@ const Container = styled.header`
       z-index: -1;
       bottom: -2px;
       left: -10%;
-      height: 16px;
+      height: 80%;
       background-color: ${({ theme }) => theme.color.yellow};
       transition: width 0.2s ease-out;
     }
@@ -76,6 +76,8 @@ const Container = styled.header`
 `
 
 const DesktopMenu = styled.div`
+  font-family: ${({ theme }) => theme.font.familySans};
+  font-size: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
