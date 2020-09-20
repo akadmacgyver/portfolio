@@ -134,7 +134,7 @@ const Question = styled.div`
     background: ${({ theme }) => theme.color.yellow};
   }
 `
-const Answer = styled.a`
+const Answer = styled.div`
   float: left;
   width: 270px;
   margin: 50px 0;

@@ -50,6 +50,29 @@ const Container = styled.header`
   @media (min-width: 768px) {
     padding: 0 100px;
   }
+
+  a {
+    position: relative;
+    z-index: 2;
+
+    ::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      z-index: -1;
+      bottom: -2px;
+      left: -10%;
+      height: 16px;
+      background-color: ${({ theme }) => theme.color.yellow};
+      transition: width 0.2s ease-out;
+    }
+
+    :hover {
+      ::before {
+        width: 130%;
+      }
+    }
+  }
 `
 
 const DesktopMenu = styled.div`

@@ -68,7 +68,7 @@ const Container = styled.footer`
 
   @media (min-width: 768px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: ${({isInHome}) => ( isInHome ? 'row' : 'column' )};
     align-items: space-between;
     position: ${({isInHome}) => ( isInHome ? 'static' : 'absolute' )};
     bottom: 25px;
