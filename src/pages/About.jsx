@@ -6,6 +6,7 @@ import MasterStyle from "../assets/styles/MasterStyle"
 import SEO from "../components/shared/SEO"
 import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
+import Footer from "../components/shared/Footer"
 
 import {
   FaReact,
@@ -46,6 +47,7 @@ const About = () => {
       />
       <MasterStyle>
         <Header />
+        <Footer isInHome={false} />
         <Container>
           <Heading headingId="about" />
           {idsList.map(item => (

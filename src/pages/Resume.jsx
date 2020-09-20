@@ -4,9 +4,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import MasterStyle from "../assets/styles/MasterStyle"
+import SEO from "../components/shared/SEO"
 import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
-import SEO from "../components/shared/SEO"
+import Footer from "../components/shared/Footer"
 
 const Resume = () => {
   const intl = useIntl()
@@ -31,6 +32,7 @@ const Resume = () => {
       />
       <MasterStyle>
         <Header />
+        <Footer isInHome={false} />
         <Container>
           <Heading headingId="resume" />
           <ButtonContainer>

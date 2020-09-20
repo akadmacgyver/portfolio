@@ -18,7 +18,7 @@ const Projects = () => {
       />
       <MasterStyle>
         <Header />
-        <Footer/>
+        <Footer isInHome={false} />
         <Container>
           <Heading headingId="projects" />
           <Inner>
@@ -60,7 +60,7 @@ const Inner = styled.div`
     grid-template-columns: repeat(2, 1fr);
     column-gap: 100px;
   }
-  @media (min-width: 1300px) {
+  @media (min-width: 1320px) {
     width: 1150px;
     column-gap: 150px;
   }

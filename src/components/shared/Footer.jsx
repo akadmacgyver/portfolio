@@ -4,11 +4,12 @@ import PropTypes from "prop-types"
 import { FaLinkedinIn, FaBehance, FaGithub } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
 
-const Footer = ({ isInHamburger }) => {
+const Footer = ({ isInHamburger, isInHome }) => {
   return (
     <Container
+      isInHome={isInHome}
       data-sal="slide-up"
-      data-sal-delay={isInHamburger ? "200" : "900"}
+      data-sal-delay={ isInHome ? (isInHamburger ? "200" : "900") : "200"}
       data-sal-easing="ease"
     >
       <a
@@ -44,22 +45,42 @@ const Footer = ({ isInHamburger }) => {
 }
 Footer.defaultProps = {
   isInHamburger: false,
+  isInHome: true,
 }
 
 Footer.propTypes = {
   isInHamburger: PropTypes.bool,
+  isInHome: PropTypes.bool,
 }
 
 export default Footer
 
 const Container = styled.footer`
   width: 150px;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  display: ${({isInHome}) => ( isInHome ? 'flex' : 'none')};
 
   .icon {
     font-size: 20px;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    position: ${({isInHome}) => ( isInHome ? 'static' : 'absolute' )};
+    bottom: 25px;
+    right: -25px;
+    height: 150px;
+  }
+
+  @media (min-width: 1530px) {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    right: 100px;
+    bottom: 50px;
   }
 `
