@@ -56,6 +56,10 @@ export default Resume
 const Container = styled.div`
   width: 100%;
   padding: 0 32px;
+
+  @media (min-width: 768px) {
+    padding: 0 100px;
+  }
 `
 const ButtonContainer = styled.div`
   width: 100%;

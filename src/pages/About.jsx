@@ -186,6 +186,10 @@ const Container = styled.div`
   width: 100%;
   padding: 0 32px;
 
+  @media (min-width: 768px) {
+    padding: 0 100px;
+  }
+
   #Q2 {
     &__en {
       ::before {

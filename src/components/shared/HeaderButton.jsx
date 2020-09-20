@@ -23,6 +23,7 @@ export default HeaderButton
 
 const Container = styled.button`
   border: none;
+  outline:none;
   background: none;
   z-index: 999;
   width: 32px;
@@ -30,6 +31,10 @@ const Container = styled.button`
 
   :hover {
     cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 `
 const MenuInner = styled.div`

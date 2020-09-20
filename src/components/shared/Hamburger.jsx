@@ -50,6 +50,10 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.color.yellow};
   transform: translateY(${({ isOpen }) => (isOpen ? "0" : "-100%")});
   color: ${({ isOpen }) => (isOpen ? "#000" : "#ffff00")};
+
+  @media (min-width: 768px) {
+    padding: 32px 100px;
+  }
 `
 const Inner = styled.div`
   width: 100%;
