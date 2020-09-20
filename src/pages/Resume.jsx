@@ -1,6 +1,5 @@
 import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import MasterStyle from "../assets/styles/MasterStyle"
@@ -8,20 +7,16 @@ import SEO from "../components/shared/SEO"
 import Header from "../components/shared/Header"
 import Heading from "../components/shared/Heading"
 import Footer from "../components/shared/Footer"
+import resumePL from "../data/resumePLs.pdf"
+import resumeEN from "../data/resumeENs.pdf"
 
 const Resume = () => {
   const intl = useIntl()
 
-  // TODO: Find a solution for picking the right pdf file dependent on intl.locale
-  const resume = useStaticQuery(graphql`
-    {
-      pdf: file(name: { eq: "resumePLs" }) {
-        name
-        extension
-        publicURL
-      }
-    }
-  `)
+  const pickResume = () => {
+    if(intl.locale === 'pl') return resumePL
+    else return resumeEN
+  }
 
   return (
     <>
@@ -37,13 +32,13 @@ const Resume = () => {
           <Heading headingId="resume" />
           <ButtonContainer>
             <Button
-              href={resume.pdf.publicURL}
+              href={pickResume()}
               target="_blank"
               rel="noreferrer"
             >
               <FormattedMessage id="showResume" />
             </Button>
-            <Button href={resume.pdf.publicURL} download>
+            <Button href={pickResume()} download>
               <FormattedMessage id="downloadResume" />
             </Button>
           </ButtonContainer>
