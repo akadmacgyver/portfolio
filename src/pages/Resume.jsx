@@ -35,10 +35,17 @@ const Resume = () => {
               href={pickResume()}
               target="_blank"
               rel="noreferrer"
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease"
             >
               <FormattedMessage id="showResume" />
             </Button>
-            <Button href={pickResume()} download>
+            <Button href={pickResume()} download
+              data-sal="slide-up"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+            >
               <FormattedMessage id="downloadResume" />
             </Button>
           </ButtonContainer>
