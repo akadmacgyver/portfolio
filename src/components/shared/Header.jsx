@@ -15,13 +15,13 @@ const Header = () => {
     <Container>
       <a href="/">Wojciech Sala</a>
       <DesktopMenu>
-          <a href="about">
+          <a href="/about" replace>
             <FormattedMessage id="about" />
           </a>
-          <a href="projects">
+          <a href="/projects" replace>
             <FormattedMessage id="projects" />
           </a>
-          <a href="resume">
+          <a href="/resume" replace>
             <FormattedMessage id="resume" />
           </a>
       </DesktopMenu>
