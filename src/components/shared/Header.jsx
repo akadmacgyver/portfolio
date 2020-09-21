@@ -1,10 +1,12 @@
 import React, { useState } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import PropTypes from "prop-types"
+import { Link } from 'gatsby'
 import styled from "styled-components"
 import Button from "./HeaderButton"
 import Hamburger from "./Hamburger"
 
-const Header = () => {
+const Header = ({ lang }) => {
   const [isMenuOpen, setMenuState] = useState(false)
 
   const toggleMenu = () => {
@@ -13,22 +15,30 @@ const Header = () => {
 
   return (
     <Container>
-      <a href="/">Wojciech Sala</a>
+      <Link to="/">Wojciech Sala</Link>
       <DesktopMenu>
-          <a href="/about" replace>
-            <FormattedMessage id="about" />
-          </a>
-          <a href="/projects" replace>
-            <FormattedMessage id="projects" />
-          </a>
-          <a href="/resume" replace>
-            <FormattedMessage id="resume" />
-          </a>
+        <Link to={'/' + lang + "/about"}>
+          <FormattedMessage id="about" />
+        </Link>
+        <Link to={'/' + lang + "/projects"}>
+          <FormattedMessage id="projects" />
+        </Link>
+        <Link to={'/' + lang + "/resume"}>
+          <FormattedMessage id="resume" />
+        </Link>
       </DesktopMenu>
       <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      <Hamburger isOpen={isMenuOpen} />
+      <Hamburger isOpen={isMenuOpen} lang={lang}/>
     </Container>
   )
+}
+
+Header.defaultProps = {
+  lang: 'en',
+}
+
+Header.propTypes = {
+  lang: PropTypes.string,
 }
 
 export default Header

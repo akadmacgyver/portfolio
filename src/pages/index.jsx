@@ -26,7 +26,9 @@ const Home = () => {
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
-        <Header />
+        <Header 
+          lang={intl.locale}
+        />
         <Container>
           <Hero>
             <HeroHeading data-sal="fade" data-sal-easing="ease">

@@ -26,7 +26,9 @@ const Resume = () => {
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
-        <Header />
+        <Header 
+          lang={intl.locale}
+        />
         <Footer isInHome={false} />
         <Container>
           <Heading headingId="resume" />

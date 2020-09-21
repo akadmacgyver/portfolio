@@ -1,23 +1,24 @@
 import React from "react"
+import { Link } from 'gatsby'
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Footer from "./Footer"
 
-const Hamburger = ({ isOpen }) => {
+const Hamburger = ({ isOpen, lang }) => {
   return (
     <Container isOpen={isOpen}>
       <Inner>
         <TextContainer>
-          <a href="/about" replace>
+          <Link to={'/' + lang + "/about"}>
             <FormattedMessage id="about" />
-          </a>
-          <a href="/projects" replace>
+          </Link>
+          <Link to={'/' + lang + "/projects"}>
             <FormattedMessage id="projects" />
-          </a>
-          <a href="/resume" replace>
+          </Link>
+          <Link to={'/' + lang + "/resume"}>
             <FormattedMessage id="resume" />
-          </a>
+          </Link>
         </TextContainer>
       </Inner>
       <Footer isInHamburger={isOpen} />
@@ -27,10 +28,12 @@ const Hamburger = ({ isOpen }) => {
 
 Hamburger.defaultProps = {
   isOpen: false,
+  lang: 'en'
 }
 
 Hamburger.propTypes = {
   isOpen: PropTypes.bool,
+  lang: PropTypes.string
 }
 
 export default Hamburger

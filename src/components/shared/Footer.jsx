@@ -73,7 +73,7 @@ const Container = styled.footer`
     position: ${({isInHome}) => ( isInHome ? 'static' : 'absolute' )};
     bottom: 25px;
     right: -25px;
-    height: 150px;
+    height: ${({isInHome}) => ( isInHome ? 'auto' : '150px' )};
   }
 
   @media (min-width: 1530px) {
