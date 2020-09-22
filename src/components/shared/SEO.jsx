@@ -58,7 +58,10 @@ const SEO = ({ description, lang, meta, titleSuffix }) => {
           content: `website`,
         },
       ].concat(meta)}
-    />
+    >
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,500&display=swap" rel="stylesheet"></link>
+    </Helmet>
   )
 }
 SEO.defaultProps = {
