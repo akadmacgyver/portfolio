@@ -10,13 +10,13 @@ const Hamburger = ({ isOpen, lang }) => {
     <Container isOpen={isOpen}>
       <Inner>
         <TextContainer>
-          <Link to={'/' + lang + "/about"}>
+          <Link to={'/' + lang + "/About"}>
             <FormattedMessage id="about" />
           </Link>
-          <Link to={'/' + lang + "/projects"}>
+          <Link to={'/' + lang + "/Projects"}>
             <FormattedMessage id="projects" />
           </Link>
-          <Link to={'/' + lang + "/resume"}>
+          <Link to={'/' + lang + "/Resume"}>
             <FormattedMessage id="resume" />
           </Link>
         </TextContainer>
