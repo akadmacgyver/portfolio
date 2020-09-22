@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
 		margin: 0 !important;
 		padding: 0 !important;
 		height: 100vh;
-		width: 100vw;
 		font-size: 1rem;
 		overflow-x: hidden;
 		-webkit-font-smoothing: antialiased;
