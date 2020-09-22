@@ -31,5 +31,22 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto Mono`,
+            subsets: [`monospace`],
+            variants: [`300`, `400`, `500`, `700`, `900`],
+          },
+          {
+            family: `Roboto`,
+            subsets: [`sans-serif`],
+            variants: [`300`, `400`, `500`, `700`, `900`],
+          },
+        ],
+      },
+    },
   ],
 }
