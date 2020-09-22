@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
 	html,
 	body,
 	#root {
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300;400;500;700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Mono:wght@300;400;500;700&display=swap');
 		background: ${({ theme }) => theme.color.white};
 		color: ${({ theme }) => theme.color.grey[950]};
 		font-family: ${({ theme }) => theme.font.family};
