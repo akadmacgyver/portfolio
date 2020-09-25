@@ -56,17 +56,17 @@ const About = () => {
                 id={item.question + "__" + intl.locale}
                 highlight={item.highlight}
                 key={item.question}
-                // data-sal="slide-left"
-                // data-sal-delay="200"
-                // data-sal-easing="ease"
+                data-sal="slide-left"
+                data-sal-delay="200"
+                data-sal-easing="ease"
               >
                 <FormattedMessage id={item.question} />
               </Question>
               <Answer
-              // key={item.answer}
-              // data-sal="slide-right"
-              // data-sal-delay="400"
-              // data-sal-easing="ease"
+                key={item.answer}
+                data-sal="slide-right"
+                data-sal-delay="400"
+                data-sal-easing="ease"
               >
                 {item.answer === "A4" ? (
                   <>
@@ -148,10 +148,10 @@ const Answer = styled.div`
   /* IconContainer position */
   #icons {
     &__en {
-      top: 140px;
+      top: 240px;
     }
     &__pl {
-      top: 160px;
+      top: 220px;
     }
   }
 `
@@ -172,17 +172,17 @@ const IconsContainer = styled.div`
 
   #frontIcons {
     &__en {
-      margin: 85px 0 20px 0;
+      margin: 80px 0 40px 0;
     }
     &__pl {
-      margin: 85px 0 40px 0;
+      margin: 125px 0 60px 0;
     }
   }
 `
 const DesignIcons = styled.div``
 const FrontIcons = styled.div``
 const GeneralIcons = styled.div`
-  margin-top: 40px;
+  margin-top: 35px;
 `
 const Container = styled.div`
   width: 100%;

@@ -15,9 +15,10 @@ export default Heading
 const Container = styled.div`
   font-weight: ${({ theme }) => theme.font.weight.regular};
   font-size: 3.125rem;
-  margin: 200px 0 100px 0;
+  margin: 100px 0;
 
   @media (min-width: 768px) {
     font-size: 6.25rem;
+    margin: 200px 0 100px 0;
   }
 `
