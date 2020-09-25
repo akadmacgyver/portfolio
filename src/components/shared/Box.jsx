@@ -7,7 +7,8 @@ const Box = () => {
       data-sal="zoom-in"
       data-sal-delay="300"
       data-sal-easing="ease"
-    ></Container>
+    >
+    </Container>
   )
 }
 

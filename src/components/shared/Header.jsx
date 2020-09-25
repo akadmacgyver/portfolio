@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 import styled from "styled-components"
 import Button from "./HeaderButton"
 import Hamburger from "./Hamburger"
@@ -17,24 +17,24 @@ const Header = ({ lang }) => {
     <Container>
       <Link to="/">Wojciech Sala</Link>
       <DesktopMenu>
-        <Link to={'/' + lang + "/About"}>
+        <Link to={"/" + lang + "/About"}>
           <FormattedMessage id="about" />
         </Link>
-        <Link to={'/' + lang + "/Projects"}>
+        <Link to={"/" + lang + "/Projects"}>
           <FormattedMessage id="projects" />
         </Link>
-        <Link to={'/' + lang + "/Resume"}>
+        <Link to={"/" + lang + "/Resume"}>
           <FormattedMessage id="resume" />
         </Link>
       </DesktopMenu>
       <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-      <Hamburger isOpen={isMenuOpen} lang={lang}/>
+      <Hamburger isOpen={isMenuOpen} lang={lang} />
     </Container>
   )
 }
 
 Header.defaultProps = {
-  lang: 'en',
+  lang: "en",
 }
 
 Header.propTypes = {
@@ -92,7 +92,7 @@ const DesktopMenu = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 250px; 
+  width: 250px;
 
   @media (max-width: 767px) {
     display: none;

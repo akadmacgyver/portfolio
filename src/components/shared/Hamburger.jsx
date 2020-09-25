@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import styled from "styled-components"
@@ -10,13 +10,13 @@ const Hamburger = ({ isOpen, lang }) => {
     <Container isOpen={isOpen}>
       <Inner>
         <TextContainer>
-          <Link to={'/' + lang + "/About"}>
+          <Link to={"/" + lang + "/About"}>
             <FormattedMessage id="about" />
           </Link>
-          <Link to={'/' + lang + "/Projects"}>
+          <Link to={"/" + lang + "/Projects"}>
             <FormattedMessage id="projects" />
           </Link>
-          <Link to={'/' + lang + "/Resume"}>
+          <Link to={"/" + lang + "/Resume"}>
             <FormattedMessage id="resume" />
           </Link>
         </TextContainer>
@@ -28,12 +28,12 @@ const Hamburger = ({ isOpen, lang }) => {
 
 Hamburger.defaultProps = {
   isOpen: false,
-  lang: 'en'
+  lang: "en",
 }
 
 Hamburger.propTypes = {
   isOpen: PropTypes.bool,
-  lang: PropTypes.string
+  lang: PropTypes.string,
 }
 
 export default Hamburger
