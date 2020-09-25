@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import favicon from "../../static/favicon.png"
 
 const SEO = ({ description, lang, meta, titleSuffix }) => {
   const { site } = useStaticQuery(
@@ -26,7 +25,6 @@ const SEO = ({ description, lang, meta, titleSuffix }) => {
         lang,
       }}
       title={site.siteMetadata.title + titleSuffix}
-      // link={[{ rel: "icon", type: "image/png", href: `${favicon}` }]}
       meta={[
         {
           name: `description`,
@@ -53,7 +51,12 @@ const SEO = ({ description, lang, meta, titleSuffix }) => {
           content: `website`,
         },
       ].concat(meta)}
-    ></Helmet>
+    >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+      ></link>
+    </Helmet>
   )
 }
 SEO.defaultProps = {
