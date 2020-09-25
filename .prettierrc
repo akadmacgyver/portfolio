@@ -1,4 +1,11 @@
 {
   "arrowParens": "avoid",
-  "semi": false
+  "semi": false,
+
+  "eslint.enable": true,
+  "files.exclude": {
+    "node_modules": true,
+    ".npm-offline-cache": true
+  },
+  "editor.formatOnSave": true
 }
