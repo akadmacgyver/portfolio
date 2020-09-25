@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Button from "./HeaderButton"
 import Hamburger from "./Hamburger"
 import Logo from "./Logo"
+import Resume from "../Resume/Resume"
 
 const Header = ({ lang }) => {
   const [isMenuOpen, setMenuState] = useState(false)
@@ -28,9 +29,7 @@ const Header = ({ lang }) => {
         <Link to={"/" + lang + "/Projects"}>
           <FormattedMessage id="projectsUpper" />
         </Link>
-        <Link to={"/" + lang + "/Resume"}>
-          <FormattedMessage id="resumeUpper" />
-        </Link>
+        <Resume />
       </DesktopMenu>
       <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Hamburger isOpen={isMenuOpen} lang={lang} />

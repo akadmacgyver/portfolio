@@ -4,6 +4,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Footer from "./Footer"
+import Resume from "../Resume/Resume"
 
 const Hamburger = ({ isOpen, lang }) => {
   return (
@@ -16,9 +17,7 @@ const Hamburger = ({ isOpen, lang }) => {
           <Link to={"/" + lang + "/Projects"}>
             <FormattedMessage id="projects" />
           </Link>
-          <Link to={"/" + lang + "/Resume"}>
-            <FormattedMessage id="resume" />
-          </Link>
+          <Resume isInHamburger={isOpen} />
         </TextContainer>
       </Inner>
       <Footer isInHamburger={isOpen} />
