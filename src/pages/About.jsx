@@ -46,29 +46,27 @@ const About = () => {
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
-        <Header 
-          lang={intl.locale}
-        />
+        <Header lang={intl.locale} />
         <Footer isInHome={false} />
         <Container>
           <Heading headingId="about" />
-          {idsList.map(item => (
+          {idsList.map((item) => (
             <>
               <Question
                 id={item.question + "__" + intl.locale}
                 highlight={item.highlight}
                 key={item.question}
-                data-sal="slide-left"
-                data-sal-delay="200"
-                data-sal-easing="ease"
+                // data-sal="slide-left"
+                // data-sal-delay="200"
+                // data-sal-easing="ease"
               >
                 <FormattedMessage id={item.question} />
               </Question>
               <Answer
-                key={item.answer}
-                data-sal="slide-right"
-                data-sal-delay="400"
-                data-sal-easing="ease"
+              // key={item.answer}
+              // data-sal="slide-right"
+              // data-sal-delay="400"
+              // data-sal-easing="ease"
               >
                 {item.answer === "A4" ? (
                   <>
@@ -101,7 +99,7 @@ const About = () => {
                     {intl
                       .formatMessage({ id: item.answer })
                       .split("/n")
-                      .map(line => (
+                      .map((line) => (
                         <p>{line}</p>
                       ))}
                   </>
@@ -202,16 +200,16 @@ const Container = styled.div`
   #Q2 {
     &__en {
       ::before {
-        bottom: 0;
-        left: 0;
-        width: 170px;
+        top: 40%;
+        right: 0;
+        width: 225px;
       }
     }
     &__pl {
       ::before {
-        top: 40%;
-        left: 45px;
-        width: 200px;
+        top: 32%;
+        left: 85px;
+        width: 140px;
       }
     }
   }
@@ -219,15 +217,15 @@ const Container = styled.div`
     &__en {
       ::before {
         top: 2px;
-        left: 45px;
-        width: 140px;
+        right: 0;
+        width: 205px;
       }
     }
       &__pl {
         ::before {
-          top: 2px;
-          left: 70px;
-          width: 120px;
+          top: 3px;
+          right: 0;
+          width: 170px;
         }
       }
     }
@@ -236,31 +234,31 @@ const Container = styled.div`
     &__en {
       ::before {
         top: 2px;
-        left: 40px;
-        width: 40px;
+        left: 70px;
+        width: 60px;
       }
     }
     &__pl {
       ::before {
-        top: 2px;
-        left: 40px;
-        width: 80px;
+        top: 3px;
+        left: 75px;
+        width: 120px;
       }
     }
   }
   #Q5 {
     &__en {
       ::before {
-        top: 38%;
+        top: 55%;
         right: 65px;
-        width: 65px;
+        width: 90px;
       }
     }
     &__pl {
       ::before {
-        top: 40%;
-        right: 55px;
-        width: 110px;
+        bottom: 26%;
+        left: 10px;
+        width: 160px;
       }
     }
   }

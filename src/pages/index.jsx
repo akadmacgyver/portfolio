@@ -74,7 +74,7 @@ const Hero = styled.div`
 `
 const HeroHeading = styled.a`
   font-size: 1.875rem;
-  margin-left: -70px;
+  margin-left: -80px;
   width: 60vw;
   position: relative;
   z-index: 2;
