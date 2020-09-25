@@ -50,6 +50,7 @@ const Container = styled.div`
   justify-content: space-around;
   flex-direction: column;
   background-color: ${({ theme }) => theme.color.yellow};
+  font-family: ${({ theme }) => theme.font.familySans};
   transform: translateY(${({ isOpen }) => (isOpen ? "0" : "-100%")});
   color: ${({ isOpen }) => (isOpen ? "#000" : "#ffff00")};
 

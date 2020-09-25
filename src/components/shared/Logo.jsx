@@ -26,4 +26,18 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* animation: example 5s infinite;
+  animation-direction: alternate;
+
+  @keyframes example {
+    0% {
+      background-color: black;
+    }
+    50% {
+      background-color: yellow;
+    }
+    100% {
+      background-color: green;
+    }
+  } */
 `

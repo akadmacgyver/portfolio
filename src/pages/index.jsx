@@ -60,6 +60,10 @@ const Container = styled.div`
   margin: 0 auto;
   padding-top: 100px;
 
+  @media (max-width: 767px) {
+    padding-top: 25px;
+  }
+
   #arrow_down {
     position: absolute;
     bottom: 16px;
