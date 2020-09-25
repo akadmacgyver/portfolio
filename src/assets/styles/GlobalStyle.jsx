@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 	body,
 	#root {
 		background: ${({ theme }) => theme.color.white};
-		color: ${({ theme }) => theme.color.grey[950]};
+		color: ${({ theme }) => theme.color.black};
 		font-family: ${({ theme }) => theme.font.family};
 		font-weight: ${({ theme }) => theme.font.weight.regular};
 		margin: 0 !important;

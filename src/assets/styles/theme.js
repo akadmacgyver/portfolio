@@ -1,7 +1,7 @@
 export const theme = {
   color: {
     white: "#ffffff",
-    black: "#000",
+    black: "#000000",
     yellow: "#FFFF00",
     grey: {
       200: "#efefef",
@@ -16,7 +16,7 @@ export const theme = {
 
   font: {
     familySans: "Roboto, sans-serif",
-    family: "Roboto Mono monospace",
+    family: "Roboto Mono, monospace",
 
     weight: {
       light: "300",

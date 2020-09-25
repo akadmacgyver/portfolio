@@ -26,9 +26,7 @@ const Home = () => {
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
-        <Header 
-          lang={intl.locale}
-        />
+        <Header lang={intl.locale} />
         <Container>
           <Hero>
             <HeroHeading data-sal="fade" data-sal-easing="ease">
@@ -55,11 +53,12 @@ export default Home
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 100px;
 
   #arrow_down {
     position: absolute;
