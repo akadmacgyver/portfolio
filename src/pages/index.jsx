@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import MasterStyle from "../assets/styles/MasterStyle"
-import SEO from "../components/shared/SEO"
 import { IoIosArrowDown } from "react-icons/io"
-
-import Header from "../components/shared/Header"
-import Box from "../components/shared/Box"
-import Footer from "../components/shared/Footer"
+import SEO from "../components/SEO"
+import Header from "../components/Header"
+import Box from "../components/Box"
+import Footer from "../components/Footer"
 
 const Home = () => {
   // const [isScrolled, setScrollState] = useState(false)

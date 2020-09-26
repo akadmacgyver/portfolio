@@ -3,10 +3,10 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import MasterStyle from "../assets/styles/MasterStyle"
-import SEO from "../components/shared/SEO"
-import Header from "../components/shared/Header"
-import Heading from "../components/shared/Heading"
-import Footer from "../components/shared/Footer"
+import SEO from "../components/SEO"
+import Header from "../components/Header"
+import Heading from "../components/Heading"
+import Footer from "../components/Footer"
 
 import {
   FaReact,

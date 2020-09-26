@@ -6,7 +6,7 @@ import styled from "styled-components"
 import Button from "./HeaderButton"
 import Hamburger from "./Hamburger"
 import Logo from "./Logo"
-import Resume from "../Resume/Resume"
+import Resume from "./Resume"
 
 const Header = ({ lang }) => {
   const [isMenuOpen, setMenuState] = useState(false)

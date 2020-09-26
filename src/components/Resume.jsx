@@ -2,8 +2,8 @@ import React from "react"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import resumePL from "../../data/resumePLs.pdf"
-import resumeEN from "../../data/resumeENs.pdf"
+import resumePL from "../data/resumePLs.pdf"
+import resumeEN from "../data/resumeENs.pdf"
 
 const Resume = ({ lang, isInHamburger }) => {
   const pickResume = () => {
