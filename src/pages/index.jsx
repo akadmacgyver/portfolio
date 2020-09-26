@@ -75,7 +75,7 @@ const HeroHeading = styled.a`
   margin-left: -80px;
   width: 60vw;
   position: relative;
-  z-index: 998;
+  z-index: 2;
 `
 const HeroText = styled.div`
   /* opacity: ${({ isScrolled }) => (isScrolled ? "0" : "1")}; */
