@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Heading from "../components/Heading"
 import Footer from "../components/Footer"
-import ProjectLink from "../components/ProjectLink"
+import ProjectItem from "../components/ProjectItem"
 
 const projects = [
   {
@@ -14,7 +14,7 @@ const projects = [
     href: "topic",
     website: "https://thetopic.pl",
     github: "https://github.com/topicpl",
-    behance: "",
+    behance: "https://www.behance.net/gallery/95608867/Topic-app-mockup",
   },
   {
     name: "Superfilmowanie",
@@ -55,9 +55,7 @@ const Projects = () => {
           <Heading headingId="projects" />
           <Inner>
             {projects.map((item) => (
-              <ProjectLink
-              // href={"projects/" + item.href}
-              ></ProjectLink>
+              <ProjectItem></ProjectItem>
             ))}
           </Inner>
         </Container>

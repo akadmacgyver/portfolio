@@ -187,6 +187,7 @@ const GeneralIcons = styled.div`
 const Container = styled.div`
   width: 100%;
   padding: 0 32px;
+  margin: 0 auto;
 
   @media (min-width: 600px) {
     width: 600px;

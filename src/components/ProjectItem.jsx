@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-const ProjectLink = () => {
+const ProjectItem = () => {
   return (
     <Container data-sal="zoom-in" data-sal-easing="ease-in-out"></Container>
   )
 }
 
-export default ProjectLink
+export default ProjectItem
 
 const Container = styled.a`
   position: relative;
