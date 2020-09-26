@@ -19,6 +19,5 @@ const Container = styled.div`
 
   @media (min-width: 768px) {
     font-size: 6.25rem;
-    padding: 200px 0 100px 0;
   }
 `

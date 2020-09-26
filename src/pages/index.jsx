@@ -52,8 +52,8 @@ export default Home
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 125px);
-  margin: 125px auto 0 auto;
+  height: calc(100vh - 150px);
+  margin: 150px auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

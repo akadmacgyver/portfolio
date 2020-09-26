@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import MasterStyle from "../assets/styles/MasterStyle"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
-import Heading from "../components/Heading"
 import Footer from "../components/Footer"
 
 const Page404 = () => {
@@ -20,7 +20,9 @@ const Page404 = () => {
         <Header lang={intl.locale} />
         <Footer isInHome={false} />
         <Container data-sal="slide-right" data-sal-easing="ease">
-          <Heading headingId="oops" />
+          <Text>
+            <FormattedMessage id="oops" />
+          </Text>
         </Container>
       </MasterStyle>
     </>
@@ -36,6 +38,18 @@ const Container = styled.div`
 
   @media (min-width: 768px) {
     padding: 0 100px;
-    padding-bottom: 100px;
+  }
+`
+const Text = styled.div`
+  font-weight: ${({ theme }) => theme.font.weight.regular};
+  font-size: 10vw;
+  padding-top: 200px;
+
+  @media (min-width: 768px) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 6.25rem;
   }
 `

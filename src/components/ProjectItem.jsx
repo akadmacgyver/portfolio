@@ -9,7 +9,7 @@ const ProjectItem = () => {
 
 export default ProjectItem
 
-const Container = styled.a`
+const Container = styled.div`
   position: relative;
   width: 100%;
   height: 0;
