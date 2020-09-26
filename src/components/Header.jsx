@@ -19,7 +19,7 @@ const Header = ({ lang }) => {
     <Container>
       <Logo />
       <DesktopMenu
-        data-sal="slide-down"
+        data-sal="zoom-in"
         data-sal-delay="200"
         data-sal-easing="ease-out"
       >
@@ -67,9 +67,8 @@ const Container = styled.header`
 
 const DesktopMenu = styled.div`
   font-family: ${({ theme }) => theme.font.familySans};
-  background-color: ${({ theme }) => theme.color.white};
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -85,11 +84,11 @@ const DesktopMenu = styled.div`
     justify-content: center;
     align-items: center;
 
-    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    transition: color 0.25s ease-out, transform 0.5s ease-out 0.1s;
 
     :hover {
-      color: ${({ theme }) => theme.color.white};
-      background-color: ${({ theme }) => theme.color.black};
+      color: ${({ theme }) => theme.color.grey[800]};
+      transform: rotate(-5deg) scale(1.1);
     }
   }
 

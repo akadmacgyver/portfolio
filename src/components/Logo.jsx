@@ -5,8 +5,8 @@ import styled from "styled-components"
 const Logo = () => {
   return (
     <Link to="/">
-      <Container data-sal="slide-down" data-sal-easing="ease-out">
-        SALA
+      <Container data-sal="zoom-in" data-sal-easing="ease-out">
+        S
       </Container>
     </Link>
   )
@@ -15,29 +15,20 @@ const Logo = () => {
 export default Logo
 
 const Container = styled.div`
-  height: 100px;
-  width: 100px;
-  background-color: ${({ theme }) => theme.color.black};
-  color: ${({ theme }) => theme.color.white};
+  width: 50px;
+  height: 50px;
+  margin-left: -1.1rem;
+  color: ${({ theme }) => theme.color.black};
   font-family: ${({ theme }) => theme.font.familySans};
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  letter-spacing: 2px;
-  font-size: 1rem;
+  font-size: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* animation: example 5s infinite;
-  animation-direction: alternate;
+  transition: color 0.25s ease-in, transform 0.5s ease-out;
 
-  @keyframes example {
-    0% {
-      background-color: black;
-    }
-    50% {
-      background-color: yellow;
-    }
-    100% {
-      background-color: green;
-    }
-  } */
+  :hover {
+    color: ${({ theme }) => theme.color.grey[600]};
+    transform: rotate(-30deg);
+  }
 `

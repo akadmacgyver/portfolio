@@ -9,7 +9,7 @@ const Footer = ({ isInHamburger, isInHome }) => {
     <Container
       isInHome={isInHome}
       data-sal="slide-up"
-      data-sal-delay={ isInHome ? (isInHamburger ? "200" : "900") : "200"}
+      data-sal-delay={isInHome ? (isInHamburger ? "200" : "900") : "200"}
       data-sal-easing="ease"
     >
       <a
@@ -60,20 +60,27 @@ const Container = styled.footer`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  display: ${({isInHome}) => ( isInHome ? 'flex' : 'none')};
+  display: ${({ isInHome }) => (isInHome ? "flex" : "none")};
 
   .icon {
     font-size: 20px;
+
+    transition: color 0.25s ease-out, transform 0.5s ease-out 0.1s;
+
+    :hover {
+      color: ${({ theme }) => theme.color.grey[800]};
+      transform: rotate(-15deg) scale(1.1);
+    }
   }
 
   @media (min-width: 768px) {
     display: flex;
-    flex-direction: ${({isInHome}) => ( isInHome ? 'row' : 'column' )};
+    flex-direction: ${({ isInHome }) => (isInHome ? "row" : "column")};
     align-items: space-between;
-    position: ${({isInHome}) => ( isInHome ? 'static' : 'absolute' )};
+    position: ${({ isInHome }) => (isInHome ? "static" : "absolute")};
     bottom: 25px;
     right: -25px;
-    height: ${({isInHome}) => ( isInHome ? 'auto' : '150px' )};
+    height: ${({ isInHome }) => (isInHome ? "auto" : "150px")};
   }
 
   @media (min-width: 1530px) {
