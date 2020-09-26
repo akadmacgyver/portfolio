@@ -53,7 +53,7 @@ const Container = styled.header`
   z-index: 998;
   width: 100vw;
   height: 100px;
-  position: sticky;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +62,6 @@ const Container = styled.header`
 
   @media (min-width: 768px) {
     padding: 0 100px;
-    position: absolute;
   }
 `
 

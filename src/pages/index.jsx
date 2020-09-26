@@ -52,16 +52,11 @@ export default Home
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 125px);
+  margin: 125px auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  padding-top: 100px;
-
-  @media (max-width: 767px) {
-    padding-top: 25px;
-  }
 
   #arrow_down {
     position: absolute;

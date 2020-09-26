@@ -16,7 +16,7 @@ export default Box
 const Container = styled.div`
   position: absolute;
   left: 70px;
-  bottom: 0;
+  top: -190px;
   z-index: -1;
   width: 200px;
   height: 270px;
