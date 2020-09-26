@@ -10,6 +10,8 @@
   "resumeUpper": "résumé",
   "showResume": "Pokaż",
   "downloadResume": "Pobierz",
+  "404": "404",
+  "oops": "Ups, nie znaleźliśmy strony, której szukasz... 😞",
   "Q1": "Dzisiaj przeprowadzimy wywiad z Wojciechem Salą, który jest 20-letnim front-end developerem, zaangażowanym również w design UI/UX. Czy to się zgadza Wojtek?",
   "A1": "Tak zgadza się, mam również troszkę doświadczenia z technologiami backendowymi oraz interesuję się ostatnio motion designem i animacją.",
   "Q2": "Co możesz nam powiedzieć o swoim doświadczeniu oraz projektach nad którymi pracowałeś?",
