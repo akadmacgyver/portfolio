@@ -29,8 +29,8 @@ const Home = () => {
         <Container>
           <Hero>
             <HeroHeading data-sal="fade" data-sal-easing="ease">
-              {intl.formatMessage({ id: "welcomeHeading" })}
               <Box />
+              {intl.formatMessage({ id: "welcomeHeading" })}
             </HeroHeading>
             <HeroText
               data-sal="slide-up"
@@ -80,7 +80,7 @@ const HeroHeading = styled.a`
   margin-left: -80px;
   width: 60vw;
   position: relative;
-  z-index: 2;
+  z-index: 998;
 `
 const HeroText = styled.div`
   /* opacity: ${({ isScrolled }) => (isScrolled ? "0" : "1")}; */
