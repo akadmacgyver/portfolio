@@ -20,7 +20,7 @@ const Hamburger = ({ isOpen, lang }) => {
           <Resume isInHamburger={isOpen} />
         </TextContainer>
       </Inner>
-      <Footer isInHamburger={isOpen} />
+      <Footer location="hamburger" />
     </Container>
   )
 }

@@ -47,7 +47,7 @@ const About = () => {
       />
       <MasterStyle>
         <Header lang={intl.locale} />
-        <Footer isInHome={false} />
+        <Footer location="about" />
         <Container>
           <Heading headingId="about" />
           {idsList.map((item) => (

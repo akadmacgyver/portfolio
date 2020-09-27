@@ -18,7 +18,7 @@ const Page404 = () => {
       />
       <MasterStyle>
         <Header lang={intl.locale} />
-        <Footer isInHome={false} />
+        <Footer location="404" />
         <Container data-sal="slide-right" data-sal-easing="ease">
           <Text>
             <FormattedMessage id="oops" />

@@ -50,7 +50,7 @@ const Projects = () => {
       />
       <MasterStyle>
         <Header lang={intl.locale} />
-        <Footer isInHome={false} />
+        <Footer location="projects" />
         <Container>
           <Heading headingId="projects" />
           <Inner>

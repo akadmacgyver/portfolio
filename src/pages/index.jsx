@@ -2,21 +2,13 @@ import React, { useState, useEffect } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import MasterStyle from "../assets/styles/MasterStyle"
-import { IoIosArrowDown } from "react-icons/io"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Box from "../components/Box"
 import Footer from "../components/Footer"
 
 const Home = () => {
-  // const [isScrolled, setScrollState] = useState(false)
-
-  // useEffect(() => {
-  //   document.body.addEventListener("scroll", _ => setScrollState(true))
-  // })
-
   const intl = useIntl()
-
   return (
     <>
       <SEO
@@ -26,8 +18,9 @@ const Home = () => {
       />
       <MasterStyle>
         <Header lang={intl.locale} />
+        <Footer location="home" />
         <Container>
-          <Hero>
+          {/* <Hero>
             <HeroHeading data-sal="fade" data-sal-easing="ease">
               <Box />
               {intl.formatMessage({ id: "welcomeHeading" })}
@@ -40,8 +33,7 @@ const Home = () => {
               {intl.formatMessage({ id: "welcomeText" })}
             </HeroText>
             <Footer />
-          </Hero>
-          <IoIosArrowDown id="arrow_down" />
+          </Hero> */}
         </Container>
       </MasterStyle>
     </>
@@ -51,20 +43,13 @@ const Home = () => {
 export default Home
 
 const Container = styled.div`
-  width: 100%;
-  height: calc(100vh - 150px);
+  /* height: calc(100vh - 150px);
   margin: 150px auto 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  #arrow_down {
-    position: absolute;
-    bottom: 16px;
-    left: calc(50% - 16px);
-    font-size: 32px;
-    opacity: 0.6;
-  }
+  justify-content: center; */
+  width: 100vw;
+  height: 100vh;
 `
 const Hero = styled.div`
   width: 150px;
