@@ -10,7 +10,7 @@ const Hamburger = ({ isOpen, lang }) => {
   return (
     <Container isOpen={isOpen}>
       <Inner>
-        <TextContainer>
+        <TextContainer data-sal="slide-left" data-sal-easing="ease-out">
           <Link to={"/" + lang + "/About"}>
             <FormattedMessage id="about" />
           </Link>

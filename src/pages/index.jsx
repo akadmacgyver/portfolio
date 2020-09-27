@@ -20,7 +20,7 @@ const Home = () => {
         <Header lang={intl.locale} />
         <Footer location="home" />
         <Container>
-          {/* <Hero>
+          <Hero>
             <HeroHeading data-sal="fade" data-sal-easing="ease">
               <Box />
               {intl.formatMessage({ id: "welcomeHeading" })}
@@ -32,8 +32,7 @@ const Home = () => {
             >
               {intl.formatMessage({ id: "welcomeText" })}
             </HeroText>
-            <Footer />
-          </Hero> */}
+          </Hero>
         </Container>
       </MasterStyle>
     </>
@@ -43,13 +42,13 @@ const Home = () => {
 export default Home
 
 const Container = styled.div`
-  /* height: calc(100vh - 150px);
+  height: calc(100vh - 150px);
   margin: 150px auto 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center; */
-  width: 100vw;
-  height: 100vh;
+  justify-content: center;
+  /* width: 100vw;
+  height: 100vh; */
 `
 const Hero = styled.div`
   width: 150px;

@@ -12,6 +12,10 @@
   "downloadResume": "Download",
   "404": "404",
   "oops": "Oops, we couldn't find what you're looking for... 😞",
+  "topicRole": "Architecture, design and front-end of welcome website as well as the app.",
+  "superfilmowanieRole": "Work with the client, design, development and deployment.",
+  "otrRole": "Responsive website design.",
+  "bitcastRole": "Architecture, front-end, mobile app and a part of back-end.",
   "Q1": "Today, we will interview Wojciech Sala who is a polish 20yo front-end developer, he also tries his skills in UI/UX design. Is that right Wojtek?",
   "A1": "Yeah, that's about right, I also have a bit of experience in back-end technologies and I'm into motion design lately.",
   "Q2": "What could you tell us  about your experience and projects you worked on?",
@@ -22,6 +26,6 @@
   "A4": "Throughout the time I worked on my projects I've always wanted to be independent and able to develop whole project just myself./nIn terms of design I feel ok with/nIf we're talking front-end I'm pretty confident with/nOn the back-end though I worked with/nAnd some general like",
   "Q5": "Ok, the last question is do you have any time left for personal interests, if so what are those?",
   "A5": "Yeah, I do in fact I'm very into learning new languages, like Spanish at the moment. Also I'm on my way to travel more and start scuba-diving more often. I'm a person who always tries to challenge myself and learn something new to keep life interesting.",
-  "Q6": "I think that's essential in our short lifes to keep it interesting, thanks a lot for the talk!",
+  "Q6": "I think that's essential in our short life to keep it interesting, thanks a lot for the talk!",
   "A6": "It was a pleasure, see you!"
 }

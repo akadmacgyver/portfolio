@@ -84,7 +84,7 @@ const Container = styled.footer`
       location === "about"
         ? "1100px"
         : location === "projects"
-        ? "1550px"
+        ? "1250px"
         : "none"}) {
     height: 150px;
     bottom: 25px;

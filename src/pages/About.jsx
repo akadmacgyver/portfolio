@@ -136,6 +136,7 @@ const Question = styled.div`
 `
 const Answer = styled.div`
   float: left;
+  text-align: left;
   width: 270px;
   margin: 50px 0;
   position: relative;
@@ -188,6 +189,7 @@ const Container = styled.div`
   width: 100%;
   padding: 0 32px;
   margin: 0 auto;
+  text-align: center;
 
   @media (min-width: 600px) {
     width: 600px;
@@ -196,6 +198,7 @@ const Container = styled.div`
   @media (min-width: 768px) {
     padding: 0 100px;
     width: 700px;
+    text-align: left;
   }
 
   #Q2 {

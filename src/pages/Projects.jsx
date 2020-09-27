@@ -7,6 +7,9 @@ import Header from "../components/Header"
 import Heading from "../components/Heading"
 import Footer from "../components/Footer"
 import ProjectItem from "../components/ProjectItem"
+// import { Router } from "@reach/router"
+// import Project from "../templates/project"
+
 
 const projects = [
   {
@@ -15,6 +18,7 @@ const projects = [
     website: "https://thetopic.pl",
     github: "https://github.com/topicpl",
     behance: "https://www.behance.net/gallery/95608867/Topic-app-mockup",
+    roleId: "topicRole",
   },
   {
     name: "Superfilmowanie",
@@ -22,6 +26,7 @@ const projects = [
     website: "http://www.superfilmowanie.pl",
     github: "https://github.com/WojciechSala/superfilmowanie",
     behance: "https://www.behance.net/gallery/95514935/Freelance-project",
+    roleId: "superfilmowanieRole",
   },
   {
     name: "On The Roofs",
@@ -29,6 +34,7 @@ const projects = [
     website: "",
     github: "",
     behance: "https://www.behance.net/gallery/95511857/On-the-roofs-redesign",
+    roleId: "otrRole",
   },
   {
     name: "The Bitcast",
@@ -36,6 +42,7 @@ const projects = [
     website: "",
     github: "https://github.com/WojciechSala/thebitcast-web",
     behance: "",
+    roleId: "bitcastRole",
   },
 ]
 
@@ -43,6 +50,9 @@ const Projects = () => {
   const intl = useIntl()
   return (
     <>
+      {/* <Router basepath="projects">
+        <Project path="/:id" />
+      </Router> */}
       <SEO
         lang={intl.locale}
         titleSuffix={intl.formatMessage({ id: "projects" })}
@@ -55,7 +65,7 @@ const Projects = () => {
           <Heading headingId="projects" />
           <Inner>
             {projects.map((item) => (
-              <ProjectItem></ProjectItem>
+              <ProjectItem {...item} />
             ))}
           </Inner>
         </Container>
@@ -69,11 +79,14 @@ export default Projects
 const Container = styled.div`
   width: 100%;
   padding: 0 32px;
-  padding-bottom: 100px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  text-align: center;
 
   @media (min-width: 768px) {
-    padding: 0 100px;
-    padding-bottom: 100px;
+    text-align: left;
+    width: 700px;
+    padding: 0;
   }
 `
 const Inner = styled.div`
@@ -82,14 +95,12 @@ const Inner = styled.div`
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
   grid-gap: 50px;
+  column-gap: 0;
 
   @media (min-width: 768px) {
-    /* width: 768px; */
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
   }
-  @media (min-width: 1320px) {
-    width: 1150px;
-    column-gap: 150px;
+  @media (min-width: 900px) {
+    column-gap: 100px;
   }
 `
