@@ -71,7 +71,7 @@ const DesktopMenu = styled.div`
   font-size: 1.1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 300px;
   height: 100px;
