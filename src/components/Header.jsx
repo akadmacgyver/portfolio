@@ -77,18 +77,28 @@ const DesktopMenu = styled.div`
   height: 100px;
 
   a {
-    height: 100px;
-    width: 100px;
-
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: color 0.25s ease-out;
 
-    transition: color 0.25s ease-out, transform 0.5s ease-out 0.1s;
+    ::after {
+      content: "";
+      background-color: ${({ theme }) => theme.color.black};
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      transition: width 0.25s ease-out;
+    }
 
     :hover {
       color: ${({ theme }) => theme.color.grey[800]};
-      transform: rotate(-5deg) scale(1.1);
+      ::after {
+        width: 100%;
+      }
     }
   }
 
