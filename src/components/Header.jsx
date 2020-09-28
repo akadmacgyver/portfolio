@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import { FormattedMessage } from "gatsby-plugin-intl"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import Button from "./HeaderButton"
-import Hamburger from "./Hamburger"
-import Logo from "./Logo"
-import Resume from "./Resume"
+import React, { useState } from 'react'
+import { FormattedMessage } from 'gatsby-plugin-intl'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
+import Button from './HeaderButton'
+import Hamburger from './Hamburger'
+import Logo from './Logo'
+import Resume from './Resume'
 
 const Header = ({ lang }) => {
   const [isMenuOpen, setMenuState] = useState(false)
@@ -23,13 +23,13 @@ const Header = ({ lang }) => {
         data-sal-delay="200"
         data-sal-easing="ease-out"
       >
-        <Link to={"/" + lang + "/About"}>
+        <Link to={'/' + lang + '/About'}>
           <FormattedMessage id="aboutUpper" />
         </Link>
-        <Link to={"/" + lang + "/Projects"}>
+        <Link to={'/' + lang + '/Projects'}>
           <FormattedMessage id="projectsUpper" />
         </Link>
-        <Resume />
+        <Resume lang={lang} />
       </DesktopMenu>
       <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Hamburger isOpen={isMenuOpen} lang={lang} />
@@ -38,11 +38,11 @@ const Header = ({ lang }) => {
 }
 
 Header.defaultProps = {
-  lang: "en",
+  lang: 'en'
 }
 
 Header.propTypes = {
-  lang: PropTypes.string,
+  lang: PropTypes.string
 }
 
 export default Header
@@ -84,7 +84,7 @@ const DesktopMenu = styled.div`
     transition: color 0.25s ease-out;
 
     ::after {
-      content: "";
+      content: '';
       background-color: ${({ theme }) => theme.color.black};
       width: 0;
       height: 1px;
