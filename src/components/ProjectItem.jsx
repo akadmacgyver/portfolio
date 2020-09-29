@@ -3,14 +3,14 @@ import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 
-const ProjectItem = ({ name, href, img }) => {
+const ProjectItem = ({ name, href, img, website }) => {
   return (
-    <Container
-      data-sal="zoom-in"
-      data-sal-easing="ease-in-out"
-    >
-      {/* <Image href={href}></Image> */}
-      <Image src={img}></Image>
+    <Container data-sal="zoom-in" data-sal-easing="ease-in-out">
+      <Image href={website} target="_blank" rel="noreferrer">
+        <span>
+          <FormattedMessage id="soon" />
+        </span>
+      </Image>
       <Name>{name}</Name>
     </Container>
   )
@@ -21,7 +21,8 @@ ProjectItem.defaultProps = {}
 ProjectItem.propTypes = {
   name: PropTypes.string,
   href: PropTypes.string,
-  img: PropTypes.string
+  img: PropTypes.string,
+  website: PropTypes.string,
 }
 
 export default ProjectItem
@@ -37,7 +38,18 @@ const Container = styled.div`
   }
 `
 
-const Image = styled.img`
+const Image = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    margin: 20px;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  /* display: block; */
   height: 485px;
   width: 300px;
   background-color: ${({ theme }) => theme.color.yellow};

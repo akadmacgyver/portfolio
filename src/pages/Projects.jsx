@@ -10,10 +10,9 @@ import ProjectItem from "../components/ProjectItem"
 // import { Router } from "@reach/router"
 // import Project from "../templates/project"
 
-
 const projects = [
   {
-    name: "The Topic",
+    name: "Topic",
     href: "topic",
     website: "https://thetopic.pl",
     github: "https://github.com/topicpl",
@@ -31,15 +30,15 @@ const projects = [
   {
     name: "On The Roofs",
     href: "otr",
-    website: "",
+    website: "https://www.behance.net/gallery/95511857/On-the-roofs-redesign",
     github: "",
     behance: "https://www.behance.net/gallery/95511857/On-the-roofs-redesign",
     roleId: "otrRole",
   },
   {
-    name: "The Bitcast",
+    name: "Bitcast",
     href: "bitcast",
-    website: "",
+    website: "https://github.com/WojciechSala/thebitcast-web",
     github: "https://github.com/WojciechSala/thebitcast-web",
     behance: "",
     roleId: "bitcastRole",
