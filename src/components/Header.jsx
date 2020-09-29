@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { FormattedMessage } from 'gatsby-plugin-intl'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import Button from './HeaderButton'
-import Hamburger from './Hamburger'
-import Logo from './Logo'
-import Resume from './Resume'
+import React, { useState } from "react"
+import { FormattedMessage } from "gatsby-plugin-intl"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import Button from "./HeaderButton"
+import Hamburger from "./Hamburger"
+import Logo from "./Logo"
+import Resume from "./Resume"
 
-const Header = ({ lang }) => {
+const Header = ({ lang, isInHome }) => {
   const [isMenuOpen, setMenuState] = useState(false)
 
   const toggleMenu = () => {
@@ -17,32 +17,36 @@ const Header = ({ lang }) => {
 
   return (
     <Container>
-      <Logo />
+      <Logo isOpen={isMenuOpen} isInHome={isInHome} />
       <DesktopMenu
+        isOpen={isMenuOpen}
+        isInHome={isInHome}
         data-sal="zoom-in"
         data-sal-delay="200"
         data-sal-easing="ease-out"
       >
-        <Link to={'/' + lang + '/About'}>
+        <Link to={"/" + lang + "/About"}>
           <FormattedMessage id="aboutUpper" />
         </Link>
-        <Link to={'/' + lang + '/Projects'}>
+        <Link to={"/" + lang + "/Projects"}>
           <FormattedMessage id="projectsUpper" />
         </Link>
         <Resume lang={lang} />
       </DesktopMenu>
-      <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} isInHome={isInHome} />
       <Hamburger isOpen={isMenuOpen} lang={lang} />
     </Container>
   )
 }
 
 Header.defaultProps = {
-  lang: 'en'
+  lang: "en",
+  isInHome: false,
 }
 
 Header.propTypes = {
-  lang: PropTypes.string
+  lang: PropTypes.string,
+  isInHome: PropTypes.bool,
 }
 
 export default Header
@@ -68,6 +72,8 @@ const Container = styled.header`
 const DesktopMenu = styled.div`
   font-family: ${({ theme }) => theme.font.familySans};
   font-weight: ${({ theme }) => theme.font.weight.medium};
+  color: ${({ isInHome, isMenuOpen }) =>
+    isInHome ? "white" : isMenuOpen ? "black" : "black"};
   font-size: 1.1rem;
   display: flex;
   flex-direction: row;
@@ -84,8 +90,8 @@ const DesktopMenu = styled.div`
     transition: color 0.25s ease-out;
 
     ::after {
-      content: '';
-      background-color: ${({ theme }) => theme.color.black};
+      content: "";
+      background: ${({ isInHome }) => (isInHome ? "white" : "black")};
       width: 0;
       height: 1px;
       position: absolute;

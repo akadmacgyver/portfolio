@@ -54,15 +54,17 @@ Footer.propTypes = {
 export default Footer
 
 const Container = styled.footer`
+  z-index: 998;
   width: 150px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   display: ${({ location }) => (location === "hamburger" ? "flex" : "none")};
 
+  color: ${({ location }) => (location === "home" ? "white" : "black")};
+
   .icon {
     font-size: 20px;
-
     transition: color 0.25s ease-out, transform 0.5s ease-out 0.1s;
 
     :hover {

@@ -17,23 +17,18 @@ const Home = () => {
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
-        <Header lang={intl.locale} />
-        <Footer location="home" />
-        <Container>
-          <Hero>
-            <HeroHeading data-sal="fade" data-sal-easing="ease">
-              <Box />
-              {intl.formatMessage({ id: "welcomeHeading" })}
-            </HeroHeading>
-            <HeroText
-              data-sal="slide-up"
-              data-sal-delay="600"
-              data-sal-easing="ease"
-            >
-              {intl.formatMessage({ id: "welcomeText" })}
-            </HeroText>
-          </Hero>
-        </Container>
+        <Foreground>
+          <Header lang={intl.locale} isInHome={true} />
+          <Footer location="home" />
+        </Foreground>
+        <Background>
+          <iframe
+            allowtransparency="false"
+            title="Fluid Canvas"
+            frameborder="0"
+            src="/fluid.html"
+          ></iframe>
+        </Background>
       </MasterStyle>
     </>
   )
@@ -41,28 +36,23 @@ const Home = () => {
 
 export default Home
 
-const Container = styled.div`
-  height: calc(100vh - 150px);
-  margin: 150px auto 0 auto;
-  display: flex;
+const Background = styled.main`
+  /* height: calc(100vh - 150px);
+  margin: 150px auto 0 auto; */
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   /* width: 100vw;
   height: 100vh; */
+  height: 100vh;
+  width: 100vw;
+
+  iframe {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 `
-const Hero = styled.div`
-  width: 150px;
-  margin: 0 auto;
-`
-const HeroHeading = styled.a`
-  font-size: 1.875rem;
-  margin-left: -80px;
-  width: 60vw;
-  position: relative;
-  z-index: 2;
-`
-const HeroText = styled.div`
-  /* opacity: ${({ isScrolled }) => (isScrolled ? "0" : "1")}; */
-  width: 215px;
-  margin: 30px 0 40px 0;
-`
+const Foreground = styled.div``
