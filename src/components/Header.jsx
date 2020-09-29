@@ -101,7 +101,6 @@ const DesktopMenu = styled.div`
     }
 
     :hover {
-      color: ${({ theme }) => theme.color.grey[800]};
       ::after {
         width: 100%;
       }

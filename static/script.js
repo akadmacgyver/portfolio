@@ -84,7 +84,7 @@ if (!ext.supportLinearFiltering) {
   config.SUNRAYS = false
 }
 
-// startGUI();
+// startGUI()
 
 function getWebGLContext(canvas) {
   const params = {

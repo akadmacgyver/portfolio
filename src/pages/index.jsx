@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import MasterStyle from "../assets/styles/MasterStyle"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
-import Box from "../components/Box"
 import Footer from "../components/Footer"
 
 const Home = () => {
@@ -37,13 +36,6 @@ const Home = () => {
 export default Home
 
 const Background = styled.main`
-  /* height: calc(100vh - 150px);
-  margin: 150px auto 0 auto; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  /* width: 100vw;
-  height: 100vh; */
   height: 100vh;
   width: 100vw;
 

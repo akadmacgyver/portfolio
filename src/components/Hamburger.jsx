@@ -53,6 +53,32 @@ const Container = styled.div`
   font-family: ${({ theme }) => theme.font.familySans};
   transform: translateY(${({ isOpen }) => (isOpen ? "0" : "-100%")});
   color: ${({ isOpen }) => (isOpen ? "#000" : "#ffff00")};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+
+  transition: ${({ isOpen }) =>
+    isOpen
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
+
+  -webkit-transition: ${({ isOpen }) =>
+    isOpen
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
+
+  -moz-transition: ${({ isOpen }) =>
+    isOpen
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
+
+  -ms-transition: ${({ isOpen }) =>
+    isOpen
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
+
+  -o-transition: ${({ isOpen }) =>
+    isOpen
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
 
   @media (min-width: 768px) {
     padding: 32px 100px;

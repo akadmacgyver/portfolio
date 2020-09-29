@@ -45,7 +45,6 @@ const Container = styled.div`
   transition: color 0.25s ease-in, transform 0.5s ease-out;
 
   :hover {
-    color: ${({ theme }) => theme.color.grey[800]};
     transform: rotate(-30deg);
   }
 `
