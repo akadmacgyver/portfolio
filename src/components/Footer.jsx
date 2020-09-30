@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
-import { FaLinkedinIn, FaBehance, FaGithub } from "react-icons/fa"
-import { FiMail } from "react-icons/fi"
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import { FaLinkedinIn, FaBehance, FaGithub } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi'
 
 const Footer = ({ location }) => {
   return (
@@ -44,23 +44,24 @@ const Footer = ({ location }) => {
   )
 }
 Footer.defaultProps = {
-  location: "",
+  location: ''
 }
 
 Footer.propTypes = {
-  location: PropTypes.string,
+  location: PropTypes.string
 }
 
 export default Footer
 
 const Container = styled.footer`
+  pointer-events: auto;
   z-index: 998;
   width: 150px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   color: ${({ theme }) => theme.color.black};
-  display: ${({ location }) => (location === "hamburger" ? "flex" : "none")};
+  display: ${({ location }) => (location === 'hamburger' ? 'flex' : 'none')};
 
   .icon {
     font-size: 20px;
@@ -81,19 +82,21 @@ const Container = styled.footer`
     bottom: 50px;
   }
 
-  @media (max-width: 1200px) {
-    bottom: ${({ location }) => (location === "home" ? "45%" : "50px")};
-  }
-
   @media (max-width: ${({ location }) =>
-      location === "about"
-        ? "1100px"
-        : location === "projects"
-        ? "1250px"
-        : "none"}) {
+      location === 'home'
+        ? '1200px'
+        : location === 'about'
+        ? '1100px'
+        : location === 'projects'
+        ? '1250px'
+        : 'none'}) {
     height: 150px;
     bottom: 25px;
     right: -25px;
     flex-direction: column;
+  }
+
+  @media (max-width: 1200px) {
+    bottom: ${({ location }) => (location === 'home' ? '50%' : '50px')};
   }
 `
