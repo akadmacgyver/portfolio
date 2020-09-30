@@ -17,7 +17,7 @@ const Home = () => {
       />
       <MasterStyle>
         <Foreground>
-          <Header lang={intl.locale} isInHome={true} />
+          <Header lang={intl.locale} />
           <Footer location="home" />
         </Foreground>
         <Background>

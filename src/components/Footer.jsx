@@ -59,15 +59,15 @@ const Container = styled.footer`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: ${({ theme }) => theme.color.black};
   display: ${({ location }) => (location === "hamburger" ? "flex" : "none")};
-
-  color: ${({ location }) => (location === "home" ? "white" : "black")};
 
   .icon {
     font-size: 20px;
     transition: color 0.25s ease-out, transform 0.5s ease-out 0.1s;
 
     :hover {
+      color: ${({ theme }) => theme.color.grey[800]};
       transform: rotate(-15deg) scale(1.1);
     }
   }

@@ -1,30 +1,15 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const Logo = ({ isOpen, isInHome }) => {
+const Logo = () => {
   return (
     <Link to="/">
-      <Container
-        isOpen={isOpen}
-        isInHome={isInHome}
-        data-sal="zoom-in"
-        data-sal-easing="ease-out"
-      >
+      <Container data-sal="zoom-in" data-sal-easing="ease-out">
         S
       </Container>
     </Link>
   )
-}
-Logo.defaultProps = {
-  isOpen: false,
-  isInHome: false,
-}
-
-Logo.propTypes = {
-  isOpen: PropTypes.bool,
-  isInHome: PropTypes.bool,
 }
 
 export default Logo
@@ -36,8 +21,7 @@ const Container = styled.div`
   margin-left: -1.1rem;
   font-family: ${({ theme }) => theme.font.familySans};
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  color: ${({ isInHome, isOpen }) =>
-    isInHome ? "white" : isOpen ? "black" : "black"};
+  color: ${({ theme }) => theme.color.black};
   font-size: 2.2rem;
   display: flex;
   justify-content: center;
@@ -46,5 +30,6 @@ const Container = styled.div`
 
   :hover {
     transform: rotate(-30deg);
+    color: ${({ theme }) => theme.color.grey[800]};
   }
 `

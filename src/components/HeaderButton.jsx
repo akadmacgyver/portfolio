@@ -2,23 +2,21 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-const HeaderButton = ({ isOpen, toggleMenu, isInHome }) => {
+const HeaderButton = ({ isOpen, toggleMenu }) => {
   return (
     <Container onClick={toggleMenu}>
-      <MenuInner isOpen={isOpen} isInHome={isInHome}></MenuInner>
+      <MenuInner isOpen={isOpen}></MenuInner>
     </Container>
   )
 }
 HeaderButton.defaultProps = {
   isOpen: false,
   toggleMenu: () => {},
-  isInHome: false,
 }
 
 HeaderButton.propTypes = {
   isOpen: PropTypes.bool,
   toggleMenu: PropTypes.func,
-  isInHome: PropTypes.bool,
 }
 
 export default HeaderButton
@@ -48,8 +46,7 @@ const MenuInner = styled.div`
   ::after {
     content: "";
     position: absolute;
-    background: ${({ isInHome, isOpen }) =>
-      isInHome ? "white" : isOpen && isInHome ? "black" : "black"};
+    background: ${({ theme }) => theme.color.black};
     width: 85%;
     height: 2px;
     transition: transform 0.25s ease-in-out;

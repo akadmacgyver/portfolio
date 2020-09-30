@@ -8,7 +8,7 @@ import Hamburger from "./Hamburger"
 import Logo from "./Logo"
 import Resume from "./Resume"
 
-const Header = ({ lang, isInHome }) => {
+const Header = ({ lang }) => {
   const [isMenuOpen, setMenuState] = useState(false)
 
   const toggleMenu = () => {
@@ -17,10 +17,8 @@ const Header = ({ lang, isInHome }) => {
 
   return (
     <Container>
-      <Logo isOpen={isMenuOpen} isInHome={isInHome} />
+      <Logo />
       <DesktopMenu
-        isOpen={isMenuOpen}
-        isInHome={isInHome}
         data-sal="zoom-in"
         data-sal-delay="200"
         data-sal-easing="ease-out"
@@ -33,7 +31,7 @@ const Header = ({ lang, isInHome }) => {
         </Link>
         <Resume lang={lang} />
       </DesktopMenu>
-      <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} isInHome={isInHome} />
+      <Button isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Hamburger isOpen={isMenuOpen} lang={lang} />
     </Container>
   )
@@ -41,12 +39,10 @@ const Header = ({ lang, isInHome }) => {
 
 Header.defaultProps = {
   lang: "en",
-  isInHome: false,
 }
 
 Header.propTypes = {
   lang: PropTypes.string,
-  isInHome: PropTypes.bool,
 }
 
 export default Header
@@ -72,8 +68,7 @@ const Container = styled.header`
 const DesktopMenu = styled.div`
   font-family: ${({ theme }) => theme.font.familySans};
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  color: ${({ isInHome, isMenuOpen }) =>
-    isInHome ? "white" : isMenuOpen ? "black" : "black"};
+  color: ${({ theme }) => theme.color.black};
   font-size: 1.1rem;
   display: flex;
   flex-direction: row;
@@ -91,7 +86,7 @@ const DesktopMenu = styled.div`
 
     ::after {
       content: "";
-      background: ${({ isInHome }) => (isInHome ? "white" : "black")};
+      background: ${({ theme }) => theme.color.black};
       width: 0;
       height: 1px;
       position: absolute;
@@ -101,6 +96,7 @@ const DesktopMenu = styled.div`
     }
 
     :hover {
+      color: ${({ theme }) => theme.color.grey[800]};
       ::after {
         width: 100%;
       }
