@@ -5,9 +5,26 @@ import MasterStyle from "../assets/styles/MasterStyle"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import HomeAbout from "../components/HomeAbout"
 
 const Home = () => {
   const intl = useIntl()
+
+  const passionList = [
+    { text: intl.formatMessage({ id: "passions.0" }) },
+    { text: intl.formatMessage({ id: "passions.1" }) },
+    { text: intl.formatMessage({ id: "passions.2" }) },
+    { text: intl.formatMessage({ id: "passions.3" }) },
+    { text: intl.formatMessage({ id: "passions.4" }) },
+    { text: intl.formatMessage({ id: "passions.5" }) },
+    { text: intl.formatMessage({ id: "passions.6" }) },
+    { text: intl.formatMessage({ id: "passions.7" }) },
+    { text: intl.formatMessage({ id: "passions.8" }) },
+    { text: intl.formatMessage({ id: "passions.9" }) },
+    { text: intl.formatMessage({ id: "passions.10" }) },
+    { text: intl.formatMessage({ id: "passions.11" }) },
+    { text: intl.formatMessage({ id: "passions.12" }) },
+  ]
   return (
     <>
       <SEO
@@ -18,6 +35,7 @@ const Home = () => {
       <MasterStyle>
         <Foreground>
           <Header lang={intl.locale} />
+          <HomeAbout passions={passionList} />
           <Footer location="home" />
         </Foreground>
         <Background>

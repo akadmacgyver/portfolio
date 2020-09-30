@@ -81,6 +81,10 @@ const Container = styled.footer`
     bottom: 50px;
   }
 
+  @media (max-width: 1200px) {
+    bottom: ${({ location }) => (location === "home" ? "45%" : "50px")};
+  }
+
   @media (max-width: ${({ location }) =>
       location === "about"
         ? "1100px"
