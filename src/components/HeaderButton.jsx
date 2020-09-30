@@ -22,6 +22,7 @@ HeaderButton.propTypes = {
 export default HeaderButton
 
 const Container = styled.button`
+  pointer-events: auto;
   border: none;
   outline: none;
   background: none;
