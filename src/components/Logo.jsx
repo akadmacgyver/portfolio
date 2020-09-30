@@ -27,6 +27,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   transition: color 0.25s ease-in, transform 0.5s ease-out;
+  pointer-events: auto;
 
   :hover {
     transform: rotate(-30deg);

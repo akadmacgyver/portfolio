@@ -59,6 +59,7 @@ const Container = styled.header`
   align-items: center;
   padding: 0 32px;
   font-size: 1.2rem;
+  pointer-events: none;
 
   @media (min-width: 768px) {
     padding: 0 100px;
@@ -83,6 +84,7 @@ const DesktopMenu = styled.div`
     justify-content: center;
     align-items: center;
     transition: color 0.25s ease-out;
+    pointer-events: auto;
 
     ::after {
       content: "";
