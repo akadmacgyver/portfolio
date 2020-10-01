@@ -3,24 +3,24 @@ import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 
-const ProjectSpecs = ({ title, timeline, role }) => {
+const ProjectSpecs = ({ title, timelineId, role }) => {
   return (
-    <Container
-    // data-sal="slide-right" data-sal-easing="ease"
-    >
-      <Title>{title}</Title>
-      <Wrapper>
+    <Container>
+      <Title data-sal="slide-right" data-sal-easing="ease">
+        {title}
+      </Title>
+      <Wrapper data-sal="slide-left" data-sal-easing="ease">
         <Specs>
-          <span>
+          <Heading>
             <FormattedMessage id="timeline" />
-          </span>
-          <a>{timeline}</a>
+          </Heading>
+          <Text>{/* <FormattedMessage id={timelineId} /> */}</Text>
         </Specs>
         <Specs>
-          <span>
+          <Heading>
             <FormattedMessage id="role" />
-          </span>
-          <a>{role}</a>
+          </Heading>
+          <Text>{role}</Text>
         </Specs>
       </Wrapper>
     </Container>
@@ -29,7 +29,7 @@ const ProjectSpecs = ({ title, timeline, role }) => {
 
 ProjectSpecs.defaultProps = {
   title: "",
-  timeline: "",
+  timelineId: "",
   role: "",
 }
 
@@ -60,13 +60,11 @@ const Wrapper = styled.div`
 `
 const Specs = styled.div`
   margin-top: 20px;
-
-  span {
-    font-weight: ${({ theme }) => theme.font.weight.medium};
-    display: block;
-  }
-
-  a {
-    font-size: 0.9rem;
-  }
+`
+const Heading = styled.span`
+  font-weight: ${({ theme }) => theme.font.weight.medium};
+  display: block;
+`
+const Text = styled.span`
+  font-size: 0.9rem;
 `

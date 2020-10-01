@@ -11,9 +11,7 @@ const ProjectSectionPlain = ({ headingId, contentId }) => {
       <span>
         <FormattedMessage id={headingId} />
       </span>
-      <a>
-        <FormattedMessage id={contentId} />
-      </a>
+      <FormattedMessage id={contentId} />
     </Container>
   )
 }

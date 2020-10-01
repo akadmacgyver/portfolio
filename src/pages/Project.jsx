@@ -8,6 +8,7 @@ import Footer from "../components/Footer"
 import Specs from "../components/Project/ProjectSpecs"
 import SectionPlain from "../components/Project/ProjectSectionPlain"
 import SectionBullet from "../components/Project/ProjectSectionBullet"
+import NextProj from "../components/Project/ProjectNext"
 
 const Project = () => {
   const intl = useIntl()
@@ -24,7 +25,11 @@ const Project = () => {
         <Footer location="project" />
         <Container>
           <img />
-          <Specs title="Topic" timeline="2 months" role="UI/UX, frontend" />
+          <Specs
+            title="Topic"
+            // timelineId={projName.timeline}
+            role="UI/UX, frontend"
+          />
           <SectionPlain headingId="About" contentId="ASD LONG TEXT" />
           <SectionBullet
             headingId="Goals"
@@ -35,6 +40,7 @@ const Project = () => {
               "Bullet four",
             ]}
           />
+          <NextProj img="otrIMG" href="otr" />
         </Container>
       </MasterStyle>
     </>

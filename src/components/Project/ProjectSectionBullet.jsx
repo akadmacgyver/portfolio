@@ -15,7 +15,7 @@ const ProjectSectionBullet = ({ headingId, bullets }) => {
         {bullets.map((item, index) => (
           <div>
             <span>{index + 1}.</span>
-            <a>{item}</a>
+            {item}
           </div>
         ))}
       </Wrapper>
@@ -56,8 +56,5 @@ const Wrapper = styled.div`
     display: inline-block;
     margin-bottom: 0;
     color: ${({ theme }) => theme.color.grey[500]};
-  }
-
-  a {
   }
 `
