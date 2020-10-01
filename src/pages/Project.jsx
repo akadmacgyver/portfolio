@@ -6,6 +6,8 @@ import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Specs from "../components/Project/ProjectSpecs"
+import SectionPlain from "../components/Project/ProjectSectionPlain"
+import SectionBullet from "../components/Project/ProjectSectionBullet"
 
 const Project = () => {
   const intl = useIntl()
@@ -23,6 +25,16 @@ const Project = () => {
         <Container>
           <img />
           <Specs title="Topic" timeline="2 months" role="UI/UX, frontend" />
+          <SectionPlain headingId="About" contentId="ASD LONG TEXT" />
+          <SectionBullet
+            headingId="Goals"
+            bullets={[
+              "Bullet one",
+              "Bullet two",
+              "Bullet three",
+              "Bullet four",
+            ]}
+          />
         </Container>
       </MasterStyle>
     </>
@@ -39,7 +51,4 @@ const Container = styled.div`
   img {
     width: 100%;
   }
-`
-const SpecsInner = styled.div`
-  width: 100%;
 `
