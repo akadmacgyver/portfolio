@@ -5,10 +5,10 @@ import styled from "styled-components"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Specs from "../components/Project/ProjectSpecs"
-import SectionPlain from "../components/Project/ProjectSectionPlain"
-import SectionBullet from "../components/Project/ProjectSectionBullet"
-import NextProj from "../components/Project/ProjectNext"
+import Specs from "../components/ProjectSpecs"
+import SectionPlain from "../components/ProjectSectionPlain"
+import SectionBullet from "../components/ProjectSectionBullet"
+import NextProj from "../components/ProjectNext"
 
 const Project = () => {
   const intl = useIntl()
