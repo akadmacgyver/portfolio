@@ -42,6 +42,7 @@ const Image = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+
   span {
     margin: 20px;
     display: block;

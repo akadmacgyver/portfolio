@@ -24,6 +24,7 @@ const Home = () => {
     { text: intl.formatMessage({ id: 'passions.10' }) },
     { text: intl.formatMessage({ id: 'passions.11' }) },
     { text: intl.formatMessage({ id: 'passions.12' }) }
+    { text: intl.formatMessage({ id: 'passions.13' }) }
   ]
   return (
     <>
