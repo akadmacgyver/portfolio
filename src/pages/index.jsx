@@ -1,37 +1,38 @@
-import React from 'react'
-import { useIntl } from 'gatsby-plugin-intl'
-import styled from 'styled-components'
-import MasterStyle from '../assets/styles/MasterStyle'
-import SEO from '../components/SEO'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import HomeAbout from '../components/HomeAbout'
+import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
+import styled from "styled-components"
+import MasterStyle from "../assets/styles/MasterStyle"
+import SEO from "../components/SEO"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import HomeAbout from "../components/HomeAbout"
 
 const Home = () => {
   const intl = useIntl()
 
   const passionList = [
-    { text: intl.formatMessage({ id: 'passions.0' }) },
-    { text: intl.formatMessage({ id: 'passions.1' }) },
-    { text: intl.formatMessage({ id: 'passions.2' }) },
-    { text: intl.formatMessage({ id: 'passions.3' }) },
-    { text: intl.formatMessage({ id: 'passions.4' }) },
-    { text: intl.formatMessage({ id: 'passions.5' }) },
-    { text: intl.formatMessage({ id: 'passions.6' }) },
-    { text: intl.formatMessage({ id: 'passions.7' }) },
-    { text: intl.formatMessage({ id: 'passions.8' }) },
-    { text: intl.formatMessage({ id: 'passions.9' }) },
-    { text: intl.formatMessage({ id: 'passions.10' }) },
-    { text: intl.formatMessage({ id: 'passions.11' }) },
-    { text: intl.formatMessage({ id: 'passions.12' }) }
-    { text: intl.formatMessage({ id: 'passions.13' }) }
+    { text: intl.formatMessage({ id: "passions.0" }) },
+    { text: intl.formatMessage({ id: "passions.1" }) },
+    { text: intl.formatMessage({ id: "passions.2" }) },
+    { text: intl.formatMessage({ id: "passions.3" }) },
+    { text: intl.formatMessage({ id: "passions.4" }) },
+    { text: intl.formatMessage({ id: "passions.5" }) },
+    { text: intl.formatMessage({ id: "passions.6" }) },
+    { text: intl.formatMessage({ id: "passions.7" }) },
+    { text: intl.formatMessage({ id: "passions.8" }) },
+    { text: intl.formatMessage({ id: "passions.9" }) },
+    { text: intl.formatMessage({ id: "passions.10" }) },
+    { text: intl.formatMessage({ id: "passions.11" }) },
+    { text: intl.formatMessage({ id: "passions.12" }) },
+    { text: intl.formatMessage({ id: "passions.13" }) },
+    { text: intl.formatMessage({ id: "passions.14" }) },
   ]
   return (
     <>
       <SEO
         lang={intl.locale}
         titleSuffix="Portfolio"
-        description={intl.formatMessage({ id: 'description' })}
+        description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
         <Foreground>

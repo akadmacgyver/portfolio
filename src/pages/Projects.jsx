@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Heading from "../components/Heading"
 import Footer from "../components/Footer"
-import ProjectItem from "../components/ProjectItem"
+import ProjectsItem from "../components/ProjectsItem"
 // import { Router } from "@reach/router"
 // import Project from "../templates/project"
 
@@ -64,7 +64,7 @@ const Projects = () => {
           <Heading headingId="projects" />
           <Inner>
             {projects.map((item) => (
-              <ProjectItem {...item} />
+              <ProjectsItem {...item} />
             ))}
           </Inner>
         </Container>
