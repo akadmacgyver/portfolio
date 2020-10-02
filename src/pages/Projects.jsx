@@ -7,46 +7,14 @@ import Header from "../components/Header"
 import Heading from "../components/Heading"
 import Footer from "../components/Footer"
 import ProjectsItem from "../components/ProjectsItem"
+import { graphql } from "gatsby"
 // import { Router } from "@reach/router"
 // import Project from "../templates/project"
 
-const projects = [
-  {
-    name: "Topic",
-    href: "topic",
-    website: "https://thetopic.pl",
-    github: "https://github.com/topicpl",
-    behance: "https://www.behance.net/gallery/95608867/Topic-app-mockup",
-    roleId: "topicRole",
-  },
-  {
-    name: "Superfilmowanie",
-    href: "superfilmowanie",
-    website: "http://www.superfilmowanie.pl",
-    github: "https://github.com/WojciechSala/superfilmowanie",
-    behance: "https://www.behance.net/gallery/95514935/Freelance-project",
-    roleId: "superfilmowanieRole",
-  },
-  {
-    name: "On The Roofs",
-    href: "otr",
-    website: "https://www.behance.net/gallery/95511857/On-the-roofs-redesign",
-    github: "",
-    behance: "https://www.behance.net/gallery/95511857/On-the-roofs-redesign",
-    roleId: "otrRole",
-  },
-  {
-    name: "Bitcast",
-    href: "bitcast",
-    website: "https://github.com/WojciechSala/thebitcast-web",
-    github: "https://github.com/WojciechSala/thebitcast-web",
-    behance: "",
-    roleId: "bitcastRole",
-  },
-]
-
-const Projects = () => {
+const Projects = (props) => {
   const intl = useIntl()
+  const projects = props.data.allMongodbPortfolioProjects.edges
+
   return (
     <>
       {/* <Router basepath="projects">
@@ -64,7 +32,7 @@ const Projects = () => {
           <Heading headingId="projects" />
           <Inner>
             {projects.map((item) => (
-              <ProjectsItem {...item} />
+              <ProjectsItem {...item.node} />
             ))}
           </Inner>
         </Container>
@@ -74,6 +42,23 @@ const Projects = () => {
 }
 
 export default Projects
+
+export const pageQuery = graphql`
+  query {
+    allMongodbPortfolioProjects {
+      edges {
+        node {
+          id
+          name
+          behance
+          github
+          href
+          website
+        }
+      }
+    }
+  }
+`
 
 const Container = styled.div`
   width: 100%;

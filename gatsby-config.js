@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Wojciech Sala — `,
@@ -33,6 +37,27 @@ module.exports = {
         theme_color: `#fff`,
         display: `standalone`,
         icon: "src/assets/favicon.png",
+      },
+    },
+    {
+      resolve: "gatsby-source-mongodb",
+      options: {
+        dbName: "portfolio",
+        collection: "projects",
+        server: {
+          address: process.env.GATSBY_DB_ADDRESS,
+          port: 27017,
+        },
+        auth: {
+          user: process.env.GATSBY_DB_USERNAME,
+          password: process.env.GATSBY_DB_PASSWORD,
+        },
+        extraParams: {
+          replicaSet: "projects-shard-0",
+          ssl: true,
+          authSource: "admin",
+          retryWrites: true,
+        },
       },
     },
   ],
