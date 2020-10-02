@@ -23,10 +23,10 @@ const Header = ({ lang }) => {
         data-sal-delay="200"
         data-sal-easing="ease-out"
       >
-        <Link to={"/" + lang + "/About"}>
+        <Link to={"/" + lang + "/about"}>
           <FormattedMessage id="aboutUpper" />
         </Link>
-        <Link to={"/" + lang + "/Projects"}>
+        <Link to={"/" + lang + "/projects"}>
           <FormattedMessage id="projectsUpper" />
         </Link>
         <Resume lang={lang} />

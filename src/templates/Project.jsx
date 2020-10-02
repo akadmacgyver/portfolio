@@ -1,5 +1,6 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
+import { graphql } from "gatsby"
 import MasterStyle from "../assets/styles/MasterStyle"
 import styled from "styled-components"
 import SEO from "../components/SEO"
@@ -10,14 +11,15 @@ import SectionPlain from "../components/ProjectSectionPlain"
 import SectionBullet from "../components/ProjectSectionBullet"
 import NextProj from "../components/ProjectNext"
 
-const Project = () => {
+const Project = (props) => {
   const intl = useIntl()
+  const project = props.data.mongodbPortfolioProjects
 
   return (
     <>
       <SEO
         lang={intl.locale}
-        titleSuffix="PROJ_NAME"
+        titleSuffix={project.name}
         description={intl.formatMessage({ id: "description" })}
       />
       <MasterStyle>
@@ -48,6 +50,18 @@ const Project = () => {
 }
 
 export default Project
+
+export const pageQuery = graphql`
+  query($href: String!) {
+    mongodbPortfolioProjects(href: { eq: $href }) {
+      behance
+      github
+      href
+      name
+      website
+    }
+  }
+`
 
 const Container = styled.div`
   width: 100%;

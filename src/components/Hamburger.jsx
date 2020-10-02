@@ -1,20 +1,20 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { FormattedMessage } from 'gatsby-plugin-intl'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import Footer from './Footer'
-import Resume from './Resume'
+import React from "react"
+import { Link } from "gatsby"
+import { FormattedMessage } from "gatsby-plugin-intl"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import Footer from "./Footer"
+import Resume from "./Resume"
 
 const Hamburger = ({ isOpen, lang }) => {
   return (
     <Container isOpen={isOpen}>
       <Inner>
         <TextContainer data-sal="slide-left" data-sal-easing="ease-out">
-          <Link to={'/' + lang + '/About'}>
+          <Link to={"/" + lang + "/about"}>
             <FormattedMessage id="about" />
           </Link>
-          <Link to={'/' + lang + '/Projects'}>
+          <Link to={"/" + lang + "/projects"}>
             <FormattedMessage id="projects" />
           </Link>
           <Resume isInHamburger={isOpen} />
@@ -27,12 +27,12 @@ const Hamburger = ({ isOpen, lang }) => {
 
 Hamburger.defaultProps = {
   isOpen: false,
-  lang: 'en'
+  lang: "en",
 }
 
 Hamburger.propTypes = {
   isOpen: PropTypes.bool,
-  lang: PropTypes.string
+  lang: PropTypes.string,
 }
 
 export default Hamburger
@@ -51,34 +51,34 @@ const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.color.white};
   font-family: ${({ theme }) => theme.font.familySans};
-  transform: translateY(${({ isOpen }) => (isOpen ? '0' : '-100%')});
-  color: ${({ isOpen }) => (isOpen ? '#000' : '#fff')};
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+  transform: translateY(${({ isOpen }) => (isOpen ? "0" : "-100%")});
+  color: ${({ isOpen }) => (isOpen ? "#000" : "#fff")};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
 
   transition: ${({ isOpen }) =>
     isOpen
-      ? 'opacity 0.3s 0s, color 0.35s 0.2s ease-in-out'
-      : 'opacity 0.3s 0s, color 0s 0s ease-in-out'};
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
 
   -webkit-transition: ${({ isOpen }) =>
     isOpen
-      ? 'opacity 0.3s 0s, color 0.35s 0.2s ease-in-out'
-      : 'opacity 0.3s 0s, color 0s 0s ease-in-out'};
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
 
   -moz-transition: ${({ isOpen }) =>
     isOpen
-      ? 'opacity 0.3s 0s, color 0.35s 0.2s ease-in-out'
-      : 'opacity 0.3s 0s, color 0s 0s ease-in-out'};
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
 
   -ms-transition: ${({ isOpen }) =>
     isOpen
-      ? 'opacity 0.3s 0s, color 0.35s 0.2s ease-in-out'
-      : 'opacity 0.3s 0s, color 0s 0s ease-in-out'};
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
 
   -o-transition: ${({ isOpen }) =>
     isOpen
-      ? 'opacity 0.3s 0s, color 0.35s 0.2s ease-in-out'
-      : 'opacity 0.3s 0s, color 0s 0s ease-in-out'};
+      ? "opacity 0.3s 0s, color 0.35s 0.2s ease-in-out"
+      : "opacity 0.3s 0s, color 0s 0s ease-in-out"};
 
   @media (min-width: 768px) {
     padding: 32px 100px;

@@ -1,13 +1,30 @@
-// const path = require("path")
+const path = require("path")
 
-// exports.onCreatePage = async ({ page, actions }) => {
-//   const { createPage } = actions
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
 
-//   if (page.path.match(/^\/projects/)) {
-//     createPage({
-//       path: "/projects",
-//       matchPath: "/projects/*",
-//       component: path.resolve("src/templates/project.jsx"),
-//     })
-//   }
-// }
+  const { data } = await graphql(`
+    {
+      projects: allMongodbPortfolioProjects {
+        edges {
+          node {
+            href
+          }
+        }
+      }
+    }
+  `)
+
+  const pageTemplate = path.resolve("./src/templates/Project.jsx")
+
+  for (const { node } of data.projects.edges) {
+    console.log("created", node.href)
+    createPage({
+      path: `/projects/${node.href}/`,
+      component: pageTemplate,
+      context: {
+        href: node.href,
+      },
+    })
+  }
+}

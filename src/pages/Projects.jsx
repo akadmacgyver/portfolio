@@ -8,8 +8,6 @@ import Heading from "../components/Heading"
 import Footer from "../components/Footer"
 import ProjectsItem from "../components/ProjectsItem"
 import { graphql } from "gatsby"
-// import { Router } from "@reach/router"
-// import Project from "../templates/project"
 
 const Projects = (props) => {
   const intl = useIntl()
@@ -17,9 +15,6 @@ const Projects = (props) => {
 
   return (
     <>
-      {/* <Router basepath="projects">
-        <Project path="/:id" />
-      </Router> */}
       <SEO
         lang={intl.locale}
         titleSuffix={intl.formatMessage({ id: "projects" })}
