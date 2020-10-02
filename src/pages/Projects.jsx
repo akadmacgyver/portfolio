@@ -27,7 +27,7 @@ const Projects = (props) => {
           <Heading headingId="projects" />
           <Inner>
             {projects.map((item) => (
-              <ProjectsItem {...item.node} />
+              <ProjectsItem {...item.node} lang={intl.locale} />
             ))}
           </Inner>
         </Container>

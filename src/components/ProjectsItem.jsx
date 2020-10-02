@@ -3,10 +3,10 @@ import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 
-const ProjectItem = ({ name, href, img }) => {
+const ProjectItem = ({ name, href, img, lang }) => {
   return (
     <Container
-      href={"projects/" + href}
+      href={"projects/" + lang + "/" + href}
       data-sal="zoom-in"
       data-sal-easing="ease-in-out"
     >

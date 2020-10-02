@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
 
-const ProjectSpecs = ({ title, timelineId, role }) => {
+const ProjectSpecs = ({ title, timeline, role }) => {
   return (
     <Container>
       <Title data-sal="slide-right" data-sal-easing="ease">
@@ -14,7 +14,7 @@ const ProjectSpecs = ({ title, timelineId, role }) => {
           <Heading>
             <FormattedMessage id="timeline" />
           </Heading>
-          <Text>{/* <FormattedMessage id={timelineId} /> */}</Text>
+          <Text>{timeline}</Text>
         </Specs>
         <Specs>
           <Heading>
@@ -29,7 +29,7 @@ const ProjectSpecs = ({ title, timelineId, role }) => {
 
 ProjectSpecs.defaultProps = {
   title: "",
-  timelineId: "",
+  timeline: "",
   role: "",
 }
 

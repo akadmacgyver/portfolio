@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import MasterStyle from "../assets/styles/MasterStyle"
@@ -29,7 +29,7 @@ const Project = (props) => {
           <img />
           <Specs
             title="Topic"
-            // timelineId={projName.timeline}
+            timeline={project.timeline}
             role="UI/UX, frontend"
           />
           <SectionPlain headingId="About" contentId="ASD LONG TEXT" />
@@ -52,13 +52,15 @@ const Project = (props) => {
 export default Project
 
 export const pageQuery = graphql`
-  query($href: String!) {
-    mongodbPortfolioProjects(href: { eq: $href }) {
+  query($href: String, $lang: String) {
+    mongodbPortfolioProjects(href: { eq: $href }, language: { eq: $lang }) {
       behance
       github
       href
       name
       website
+      language
+      timeline
     }
   }
 `

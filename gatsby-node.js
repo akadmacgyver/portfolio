@@ -9,21 +9,22 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             href
+            language
           }
         }
       }
     }
   `)
 
-  const pageTemplate = path.resolve("./src/templates/Project.jsx")
+  const pageTemplate = path.resolve("./src/templates/project.jsx")
 
   for (const { node } of data.projects.edges) {
-    console.log("created", node.href)
     createPage({
-      path: `/projects/${node.href}/`,
+      path: `/projects/${node.language}/${node.href}/`,
       component: pageTemplate,
       context: {
         href: node.href,
+        lang: node.language,
       },
     })
   }
