@@ -54,8 +54,10 @@ const SEO = ({ description, lang, meta, titleSuffix }) => {
     >
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet"
+        rel="preload"
+        as="style"
       ></link>
+      <meta name="theme-color" content="#ffffff"></meta>
     </Helmet>
   )
 }
