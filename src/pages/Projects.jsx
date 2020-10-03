@@ -65,28 +65,28 @@ export const pageQuery = graphql`
     }
     topicImg: file(relativePath: { eq: "data/topic-logo.png" }) {
       childImageSharp {
-        fixed(width: 300, height: 485) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    bitcastImg: file(relativePath: { eq: "data/topic-logo.png" }) {
+    bitcastImg: file(relativePath: { eq: "data/bitcast-logo.png" }) {
       childImageSharp {
-        fixed(width: 300, height: 485) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    otrImg: file(relativePath: { eq: "data/topic-logo.png" }) {
+    otrImg: file(relativePath: { eq: "data/otr-logo.jpg" }) {
       childImageSharp {
-        fixed(width: 300, height: 485) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    superfilmowanieImg: file(relativePath: { eq: "data/topic-logo.png" }) {
+    superfilmowanieImg: file(relativePath: { eq: "data/sf-logo.jpg" }) {
       childImageSharp {
-        fixed(width: 300, height: 485) {
+        fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
         }
       }

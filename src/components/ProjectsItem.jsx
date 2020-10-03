@@ -57,7 +57,8 @@ const Container = styled(Link)`
   }
 `
 const Image = styled.div`
-  height: 485px;
+  /* height: 485px; */
+  height: 300px;
   width: 300px;
   margin-bottom: 20px;
   filter: blur(0);
