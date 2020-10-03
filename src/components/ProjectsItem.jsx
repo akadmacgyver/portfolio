@@ -57,7 +57,6 @@ const Container = styled(Link)`
   }
 `
 const Image = styled.div`
-  /* height: 485px; */
   height: 300px;
   width: 300px;
   margin-bottom: 20px;
@@ -66,7 +65,7 @@ const Image = styled.div`
   -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
-  transition: filter 0.25s ease-in;
+  transition: filter 0.25s 0s ease-in;
 
   :hover {
     cursor: pointer;

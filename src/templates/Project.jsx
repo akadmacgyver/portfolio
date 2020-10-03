@@ -75,4 +75,8 @@ const Container = styled.div`
   img {
     width: 100%;
   }
+
+  @media (min-width: 768px) {
+    width: 700px;
+  }
 `
