@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import MasterStyle from "../assets/styles/MasterStyle"
 import styled from "styled-components"
 import SEO from "../components/SEO"
@@ -26,7 +27,7 @@ const Project = (props) => {
         <Header lang={intl.locale} />
         <Footer location="project" />
         <Container>
-          <img />
+          {/* <Img fixed={project.img} /> */}
           <Specs
             title="Topic"
             timeline={project.timeline}
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
       website
       language
       timeline
+      # img
     }
   }
 `

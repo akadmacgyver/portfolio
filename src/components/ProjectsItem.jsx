@@ -1,36 +1,52 @@
 import React from "react"
 import styled from "styled-components"
-import { FormattedMessage } from "gatsby-plugin-intl"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 
-const ProjectItem = ({ name, href, img, lang }) => {
+const ProjectItem = ({ name, href, img, lang, language }) => {
   return (
-    <Container
-      href={"projects/" + lang + "/" + href}
-      data-sal="zoom-in"
-      data-sal-easing="ease-in-out"
-    >
-      <Image>
-        <span>
-          <FormattedMessage id="soon" />
-        </span>
-      </Image>
-      <Name>{name}</Name>
-    </Container>
+    <>
+      {lang === language ? (
+        <Container
+          to={"/projects/" + lang + "/" + href}
+          data-sal="zoom-in"
+          data-sal-easing="ease-in-out"
+        >
+          <Image>
+            <Img
+              fixed={img}
+              loading="lazy"
+              draggable={false}
+              alt={name + "logo"}
+            />
+          </Image>
+          <Name>{name}</Name>
+        </Container>
+      ) : null}
+    </>
   )
 }
 
-ProjectItem.defaultProps = {}
+ProjectItem.defaultProps = {
+  name: "",
+  href: "",
+  img: {},
+  lang: "",
+  language: "",
+}
 
 ProjectItem.propTypes = {
-  name: PropTypes.string,
-  href: PropTypes.string,
-  img: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  img: PropTypes.object,
+  lang: PropTypes.string,
+  language: PropTypes.string,
 }
 
 export default ProjectItem
 
-const Container = styled.a`
+const Container = styled(Link)`
   width: 300px;
   text-align: left;
 
@@ -40,30 +56,20 @@ const Container = styled.a`
     }
   }
 `
-
 const Image = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  span {
-    margin: 20px;
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
   height: 485px;
   width: 300px;
-  background-color: ${({ theme }) => theme.color.yellow};
   margin-bottom: 20px;
+  filter: blur(0);
 
   -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: filter 0.25s ease-in;
 
   :hover {
     cursor: pointer;
+    filter: blur(3px);
   }
 
   @media (min-width: 364px) {

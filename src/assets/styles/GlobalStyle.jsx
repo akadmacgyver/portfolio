@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
 
 	/* Handle */
 	::-webkit-scrollbar-thumb {
-				background: ${({ theme }) => theme.color.yellow};
+		background: ${({ theme }) => theme.color.grey[500]};
 		border-radius: 100px;
 	}
 `

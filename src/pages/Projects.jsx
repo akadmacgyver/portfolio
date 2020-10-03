@@ -27,7 +27,21 @@ const Projects = (props) => {
           <Heading headingId="projects" />
           <Inner>
             {projects.map((item) => (
-              <ProjectsItem {...item.node} lang={intl.locale} />
+              <ProjectsItem
+                {...item.node}
+                lang={intl.locale}
+                img={
+                  item.node.href === "topic"
+                    ? props.data.topicImg.childImageSharp.fixed
+                    : item.node.href === "superfilmowanie"
+                    ? props.data.superfilmowanieImg.childImageSharp.fixed
+                    : item.node.href === "otr"
+                    ? props.data.otrImg.childImageSharp.fixed
+                    : item.node.href === "bitcast"
+                    ? props.data.bitcastImg.childImageSharp.fixed
+                    : null
+                }
+              />
             ))}
           </Inner>
         </Container>
@@ -43,12 +57,37 @@ export const pageQuery = graphql`
     allMongodbPortfolioProjects {
       edges {
         node {
-          id
           name
-          behance
-          github
           href
-          website
+          language
+        }
+      }
+    }
+    topicImg: file(relativePath: { eq: "data/topic-logo.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 485) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    bitcastImg: file(relativePath: { eq: "data/topic-logo.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 485) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    otrImg: file(relativePath: { eq: "data/topic-logo.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 485) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    superfilmowanieImg: file(relativePath: { eq: "data/topic-logo.png" }) {
+      childImageSharp {
+        fixed(width: 300, height: 485) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

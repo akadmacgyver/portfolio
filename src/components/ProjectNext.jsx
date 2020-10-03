@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 import { FormattedMessage } from "gatsby-plugin-intl"
+import Img from "gatsby-image"
 
 const ProjectNext = ({ img, href }) => {
   return (
@@ -9,7 +10,7 @@ const ProjectNext = ({ img, href }) => {
       <a href={href} alt="">
         <FormattedMessage id="nextProj" />
       </a>
-      <img></img>
+      <Img />
     </Container>
   )
 }
