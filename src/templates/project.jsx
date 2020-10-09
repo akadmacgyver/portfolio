@@ -32,6 +32,9 @@ const Project = (props) => {
             title={project.name}
             timeline={project.timeline}
             role={project.role}
+            website={project.website}
+            github={project.github}
+            behance={project.behance}
           />
           <SectionPlain headingId="proj.about" content={project.about} />
           <SectionBullet headingId="proj.goals" bullets={project.goals} />
@@ -53,8 +56,8 @@ export default Project
 export const pageQuery = graphql`
   query($href: String, $lang: String) {
     mongodbPortfolioProjects(href: { eq: $href }, language: { eq: $lang }) {
-      behance
       github
+      behance
       href
       name
       website
