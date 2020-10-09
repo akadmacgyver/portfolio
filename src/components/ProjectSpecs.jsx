@@ -12,13 +12,13 @@ const ProjectSpecs = ({ title, timeline, role }) => {
       <Wrapper data-sal="slide-left" data-sal-easing="ease">
         <Specs>
           <Heading>
-            <FormattedMessage id="timeline" />
+            <FormattedMessage id="proj.timeline" />
           </Heading>
           <Text>{timeline}</Text>
         </Specs>
         <Specs>
           <Heading>
-            <FormattedMessage id="role" />
+            <FormattedMessage id="proj.role" />
           </Heading>
           <Text>{role}</Text>
         </Specs>

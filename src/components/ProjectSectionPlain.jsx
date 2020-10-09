@@ -3,7 +3,7 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-const ProjectSectionPlain = ({ headingId, contentId }) => {
+const ProjectSectionPlain = ({ headingId, content }) => {
   return (
     <Container
     // data-sal="zoom-in" data-sal-easing="ease-out"
@@ -11,19 +11,19 @@ const ProjectSectionPlain = ({ headingId, contentId }) => {
       <span>
         <FormattedMessage id={headingId} />
       </span>
-      <FormattedMessage id={contentId} />
+      {content}
     </Container>
   )
 }
 
 ProjectSectionPlain.defaultProps = {
   headingId: "",
-  contentId: "",
+  content: "",
 }
 
 ProjectSectionPlain.propTypes = {
   headingId: PropTypes.string,
-  contentId: PropTypes.string,
+  content: PropTypes.string,
 }
 
 export default ProjectSectionPlain

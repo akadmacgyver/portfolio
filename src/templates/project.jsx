@@ -1,7 +1,7 @@
 import React from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import MasterStyle from "../assets/styles/MasterStyle"
 import styled from "styled-components"
 import SEO from "../components/SEO"
@@ -10,7 +10,7 @@ import Footer from "../components/Footer"
 import Specs from "../components/ProjectSpecs"
 import SectionPlain from "../components/ProjectSectionPlain"
 import SectionBullet from "../components/ProjectSectionBullet"
-import NextProj from "../components/ProjectNext"
+// import NextProj from "../components/ProjectNext"
 
 const Project = (props) => {
   const intl = useIntl()
@@ -29,21 +29,19 @@ const Project = (props) => {
         <Container>
           {/* <Img fixed={project.img} /> */}
           <Specs
-            title="Topic"
+            title={project.name}
             timeline={project.timeline}
-            role="UI/UX, frontend"
+            role={project.role}
           />
-          <SectionPlain headingId="About" contentId="ASD LONG TEXT" />
-          <SectionBullet
-            headingId="Goals"
-            bullets={[
-              "Bullet one",
-              "Bullet two",
-              "Bullet three",
-              "Bullet four",
-            ]}
+          <SectionPlain headingId="proj.about" content={project.about} />
+          <SectionBullet headingId="proj.goals" bullets={project.goals} />
+          <SectionBullet headingId="proj.design" bullets={project.design} />
+          <SectionBullet headingId="proj.stack" bullets={project.stack} />
+          <SectionPlain
+            headingId="proj.conclusion"
+            content={project.conclusion}
           />
-          <NextProj img="otrIMG" href="otr" />
+          {/* <NextProj img="otrIMG" href={project.nextProjHref} /> */}
         </Container>
       </MasterStyle>
     </>
@@ -62,7 +60,13 @@ export const pageQuery = graphql`
       website
       language
       timeline
-      # img
+      role
+      about
+      goals
+      design
+      stack
+      conclusion
+      nextProjHref
     }
   }
 `
@@ -70,7 +74,7 @@ export const pageQuery = graphql`
 const Container = styled.div`
   width: 100%;
   padding: 0 32px;
-  margin: 0 auto;
+  margin: 200px auto;
 
   img {
     width: 100%;

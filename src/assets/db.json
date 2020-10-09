@@ -1,0 +1,95 @@
+// TOPIC
+{
+	"language": "pl",
+	"timeline": "Wciaż trwa",
+	"role": "UI/UX, front-end",
+	"about": "Topic to wideo chat łączący ludzi z tą samą pasją. Platforma pozwoli Ci się uczyć, rozmawiać na tematy, które kochasz, a nawet poznać drógą połówkę podzielającą twoje zainteresowania.",
+	"goals": ["Intuicyjny design.", "Rozmowa w grupach 1-6 bez opóźnień.", "Aplikacja zachęcająca do wykorzystania PWA."],
+	"design": ["Przejrzysty UI i intuicyjny  UX.", "Spójna kolorystyka wskazująca użytkownikowi siłę i zufanie, które niesie ze sobą platforma.", "Projekt stworzony zgodnie z założeniami designu dla platform mobilnych oraz web."],
+	"stack": ["Strona powitalna została stworzony za pomocą Gatsby.js dla szybszej integracji SEO, oraz ponieważ jest statyczna.", "Aplikacja została napisana w frameworku React, ponieważ jest CSR oraz wymaga dobrej kompatybilności z WebRTC.", "Serwer uzywa websocketów, a napisany jest w Node.js oraz express."],
+	"conclusion": "Dzięki pracy nad projektem w zespole pogłębiłem wiedzę z zakresu Git, spraw organizacyjnych oraz komunikacji. Projekt polega na rozmowach video, nauczyłem się implementacji oraz obsługi scieżek audio/video po stronie klienta. Pogłębiłem również wiedzę z zaakresu architektury aplikacji oraz przełożyłem ją na praktykę.",
+	"nextProjHref": "bitcast"
+}
+{
+	"language": "en",
+	"timeline": "Ongoing",
+	"role": "UI/UX, front-end",
+	"about": "Topic is a video chat linking people with the same passion. The platform allows you to learn, talk on subjects you love, or even meet a soulmate that gets your interests.",
+	"goals": ["Intuitive design.", "Video chat with 1-6 people with no latency.", "Web app promoting use of PWA."],
+	"design": ["Transparent UI and intuitive  UX.", "Consistent colors and theme showing user the strength and trust that the platform brings.", "Design made based on mobile platform and web designing guidelines."],
+	"stack": ["Landing page was made using Gatsby.js for faster SEO integration and because it's only static.", "The app is written in pure React as it's CSR and needs good WebRTC support.", "Server side uses websockets on top of Node.js with express."],
+	"conclusion": "Thanks to team work I've learned a lot on Git, organizations and communication. Project is mostly about video chatting so I learned how to implement and process audio/video streams on client side. I was responsible for designing the app's architecture, which gave me a lot of knowledge as well as practice.",
+	"nextProjHref": "bitcast"
+}
+
+// BITCAST
+{
+	"language": "pl",
+	"timeline": "Rok, zawieszony",
+	"role": "UI/UX, front-end, back-end, mobile",
+	"about": "The Bitcast to platforma starająca się rozwiązać problem jakości w niszy podcasterskiej. Stara się umożliwić podcasterom na sprawiedliwszy zarobek z ich pracy i skupienie się na ich pasji dzięki dobrej platformie i systemowi monetyzacji.",
+	"goals": ["Stworzyć aplikację umożliwiającą podcasterom wygodny upload oraz monetyzację.", "Stworzyć platformę chętnie wykorzystywną przez słuchaczy podcastów.", "Postawić nacisk na aplikacje mobilną."],
+	"design": ["Stworzyć przejrzysty UI/UX dla podcasterów.", "Trzymać się wytycznych material designu dla urządzeń mobilnych oraz przeglądarek.", "Utrzymać konsekwencję pod względem kolorystyki.", "Platforma stawia wyzwanie pod względem zaprojektowania wygodnego RWD."],
+	"stack": ["Strona internetowa została wykonana za pomoca Vue.js oraz Vuex.", "Aplikacja mobilna przy użyciu react-native na oblie platformy mobilne.", "Serwer był programowany przy użyciu Node.js, Express", "Baza danych to MySQL.", "Autentykacja została wykonana dzięki passport.js."],
+	"conclusion": "Praca w zespole wiele mnie nauczyła, natomiast projekt tak dużej skali przytłoczył cały zespół. Brak doświadczenia w niektórych bibliotekach często hamował zapał a utrudnienia w komunikacji opóźniały pracę. Ucząc się na błędach wyniosłem z tego projektu zarówno masę doświadczenia, umiejętności miękkich oraz typowo technicnzych.",
+	"nextProjHref": "superfilmowanie"
+}
+{
+	"language": "en",
+	"timeline": "1 year, suspended",
+	"role": "UI/UX, front-end, back-end, mobile",
+	"about": "The Bitcast is a platform that tries to solve quality problem in podcasting niche. Also tries to allow podcasters to earn fairer money for they work and let them focus on their passion by providing great platform and monetization system.",
+	"goals": ["Create an app that lets podcasters convenient upload and monetization.", "Create a platform thet listeners of podcasts will be using with ease.", "Focus on mobile app."],
+	"design": ["Create clear UI/UX for podcasters.", "Follow the principles of material design for mobile and web.", "Make color pallete as consisten as possible.", "Platforms is hard to make good RWD design."],
+	"stack": ["Website was made using Vue.js and Vuex.", "Mobile app is created thanks to react-native for both platforms.", "Server side was made using Node.js and Express.", "Database was handled by MongoDB before we moved to MySQL.", "Passport.js let us build authentication system."],
+	"conclusion": "Work in a team learned me a lot but project of this scale overhelmed the whole team, there's no doubt about that. The lack of experience with some libraries stopped our enthusiasm way too often - that,  combined with communication problems were the reason for most of our delays. Learning on my mistakes I am now, way more experienced as a software developer as well as a teammate.",
+	"nextProjHref": "superfilmowanie"
+}
+
+// SUPERFILMOWANIE
+{
+	"language": "pl",
+	"timeline": "1 miesiąc",
+	"role": "UI/UX, front-end",
+	"about": "Superfilmowanie to strona firmowa stworzona na zamówienie klienta świadczącego usługi operatorskie na imprezy okolicznościowe.",
+	"goals": ["Zebranie oczekiwań klienta i unowocześnienie starej strony.", "Implementacja systemu CMS.", "Stworzenie projektu strony w AdobeXD oraz strony statycznej."],
+	"design": ["Kolorystyka zgodnie z wymaganiami klienta.", "Unowocześnienie strony o design mobilny i pełne RWD.", "Projekt miał być prosty oraz bez większych zmian jeśli chodzi o starsszy projekt."],
+	"stack": ["Strona została wykonana przy użycu React.js", "System CMS wykonany za pomocą GraphCMS oraz GraphQL."],
+	"conclusion": "Wykonałem całą stronę poczynając od designu, przez development, aż po deployment aplikacji. Projekt pozwolił mi rozwinąć umiejętności miękkie oraz doświadczyć pracy z klientem.",
+	"nextProjHref": "otr"
+}
+{
+	"language": "en",
+	"timeline": "1 month",
+	"role": "UI/UX, front-end",
+	"about": "Superfilmowanie is a website created for a client's company specializing in moviemaking.",
+	"goals": ["Gathering client's expectations and improving old website.", "CMS system implementation.", "Creating website project in AdobeXD and making of static website."],
+	"design": ["Colors as user expercted them to be.", "Providing full RWD for the website.", "Projet was not supposed to be changed a lot compared to the old one."],
+	"stack": ["Website was made using React.js", "CMS system was made using GraphCMS and GraphQL."],
+	"conclusion": "Project let me go through the full experience: design, development and deployment. I learned a lot on work with a client.",
+	"nextProjHref": "otr"
+}
+
+// OTR
+{
+	"language": "pl",
+	"timeline": "2 tygodnie",
+	"role": "UI/UX",
+	"about": "Ontheroofs to projekt stowrzony przez Vitaliy Raskalov i Vadim Makhorov polegający na urban exploringu oraz rooftoppingu.",
+	"goals": ["Stworzyć nowy, odświerzony design aktualnej strony."],
+	"design": ["Kolory mialy być zgodne z aktualnym stylem projektu oraz byc głównie ciemne.", "Stworzyć pełny RWD i intuicyjny UX.", "Mimo dużej ilości tekstu i zdjęć pozostać przy minimaliźmie."],
+	"stack": ["Tworząc stronę, zrobiłbym stronę statyczną przy użyciu Gatsby.js, implementując system CMS.", "Zdjęcia byłyby zwracane przez serwer dla szybszego ładowania."],
+	"conclusion": "Tworzenie designu zwróciło moją uwagę na animacje. Skupiłem się na konsekwencji i oraz powtarzalnośći elementów UI oraz kolorystyki. Research pozwolił mi lepiej dopasować funkcjonalność strony do potrzeb odbiorców projektu.",
+	"nextProjHref": "topic"
+}
+{
+	"language": "en",
+	"timeline": "2 weeks",
+	"role": "UI/UX",
+	"about": "Ontheroofs is an urban exploration and rooftopping photography project conceived by Vitaliy Raskalov and Vadim Makhorov, from Ukraine and from Russia",
+	"goals": ["Redesign the current website."],
+	"design": ["Colors were supposed to follow their style and be mostly dark.", "Create full RWD adn intuitive UX.", "Keep the design minimalistic despite big numer of images and text."],
+	"stack": ["If I were supposed to make a website, I'd make a static website using Gatsby.js with CMS system.", "Images would be returned by the server for better performance."],
+	"conclusion": "Creation of the design got me thinking about importance of the animations in the website. I focused on consistency of UI elements theme and color palette. Research let me better design the functionality of the website for OTR audience's needs.",
+	"nextProjHref": "topic"
+}

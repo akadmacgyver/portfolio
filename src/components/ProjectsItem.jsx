@@ -22,6 +22,8 @@ const ProjectItem = ({ name, href, img, lang, language }) => {
             />
           </Image>
           <Name>{name}</Name>
+          <Name>{lang}</Name>
+          <Name>{language}</Name>
         </Container>
       ) : null}
     </>
